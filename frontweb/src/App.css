@@ -1,0 +1,24 @@
+h1, h2, h3, h4,h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+.bg {
+  background-image: url("assets/images/background-page-2.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+}

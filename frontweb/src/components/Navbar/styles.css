@@ -1,0 +1,23 @@
+.main-nav {
+    height: 65px;
+    align-items: center;
+    padding: 10px 50px;
+    border-bottom: 5px solid #2D569D;
+}
+
+.logo-container {
+    height: 40px;
+}
+
+.navbar-container {
+    justify-content: end;
+}
+
+.main-menu {
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    width: 380px;
+    justify-content: space-between;
+    color: #fff;
+}
