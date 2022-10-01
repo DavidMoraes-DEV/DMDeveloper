@@ -1,23 +1,71 @@
 .main-nav {
-    height: 65px;
+    height: 70px;
     align-items: center;
-    padding: 10px 50px;
-    border-bottom: 5px solid #2D569D;
+    padding: 10px 20px;
+    border-bottom: 10px solid #2D569D;
 }
 
 .logo-container {
-    height: 40px;
+    height: 30px;
 }
 
 .navbar-container {
-    justify-content: end;
+    background-color: #2D569D;
+    margin-top: 20px;
 }
 
 .main-menu {
-    display: flex;
     font-size: 15px;
     font-weight: bold;
-    width: 380px;
-    justify-content: space-between;
     color: #fff;
+}
+
+.main-menu-item {
+    height: 45px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-menu-item:hover {
+    background-color: #222222;
+}
+
+.main-menu-link.active {
+    background-color: #000000;
+}
+
+@media (min-width: 768px) {
+    .main-nav {
+        padding: 10px 30px;
+    }
+
+    .main-menu {
+        display: flex;
+        width: 500px;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .main-menu-item {
+        height: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar-container {
+        justify-content: end;
+        background-color: #000000;
+        margin-top: 0;
+    }
+
+    .main-menu-item:hover {
+        background-color: #385992;
+    }
+    
+    .main-menu-link.active {
+        background-color: #2D569D;
+    }
 }

@@ -1,4 +1,17 @@
-h1, h2, h3, h4,h5, h6 {
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Barlow:wght@200;400;500;600;700&display=swap');
+
+* {
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: Alegreya Sans SC;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+h3, h4,h5, h6 {
+  font-family: Barlow;
   font-weight: 700;
   margin-bottom: 0;
 }
