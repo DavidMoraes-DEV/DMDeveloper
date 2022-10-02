@@ -1,4 +1,144 @@
 .home-container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.home-card-container h1 {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid orange;
+}
+
+.home-card-container-image {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+}
+
+.home-card-container-image img {
+  width: 100%;
+  border: 1px solid pink;
+}
+
+.home-image-container {
+  display: none;
+  border: 1px solid blue;
+}
+
+.home-card-buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 5px;
+  border: 1px solid green;
+}
+
+.home-card-buttons-container a {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.home-card-buttons-container button {
+  width: 100%;
+  font-size: 12px;
+}
+
+@media (min-width: 576px) {
+  .home-container {
+    padding: 30px;
+  }
+
+  .home-card-container h1 {
+    font-size: 1.8em;
+  }
+
+  .home-card-container-image {
+    padding: 15px 100px;
+    margin-bottom: 15px;
+  }
+
+  .home-card-buttons-container {
+    padding: 0 70px;
+  }
+
+  .home-card-buttons-container a {
+    padding: 0 30px;
+  }
+
+  .home-card-buttons-container button {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-card-container h1 {
+    font-size: 2.5em;
+  }
+
+  .home-card-container-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .home-card-container-image img {
+    width: 600px;
+  }
+
+  .home-card-buttons-container a {
+    width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-container {
     height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: row;
+    padding: 40px 50px;
+  }
+
+  .home-card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 40px;
+    border: 1px solid yellow;
+  }
+  .home-card-container h1 {
+    text-align: start;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+
+  .home-card-container-image {
+    padding: 0;
+  }
+
+  .home-card-container-image img {
+    width: 500px;
+  }
+
+  .home-card-buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  .home-card-buttons-container button {
+    width: 200px;
+  }
+
+  .home-card-button {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  .home-image-container {
+    display: unset;
     width: 100%;
+  }
 }

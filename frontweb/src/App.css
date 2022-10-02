@@ -35,3 +35,9 @@ a, a:hover {
   background-size: cover;
   background-color: #000000;
 }
+
+.base-button {
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #2D569D;
+}
