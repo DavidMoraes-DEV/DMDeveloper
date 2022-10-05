@@ -1,0 +1,57 @@
+h1 {
+    font-size: 18px;
+    color: #A0A0A0;
+    margin-bottom: 10px;
+}
+
+.resume-container {
+    padding: 20px;
+    height: auto;
+    border: 1px solid red;
+}
+
+.resume-card-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid yellow;
+}
+
+.resume-image-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+    border: 1px solid blue;
+}
+
+.resume-image-container {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #464646;
+    border: 1px solid orange;
+}
+
+.resume-button-container {
+    width: 100%;
+    height: 30px;
+    font-size: 11px;
+    background-color: #2D569D;
+}
+
+.resume-courses-container {
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.resume-courses-container h1 {
+    font-size: 18px;
+    color: #A0A0A0;
+    margin-bottom: 10px;
+}
+
+.skills-container {
+    padding: 20px;
+    border: 1px solid yellow;
+}

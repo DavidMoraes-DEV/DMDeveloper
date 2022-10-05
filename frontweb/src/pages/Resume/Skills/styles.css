@@ -1,0 +1,50 @@
+.skills-tittle-container {
+    padding: 7px 10px;
+    background-color: #494949;
+    color: #fff;
+}
+
+.skills-tittle-container h2 {
+    font-size: 15px;
+}
+
+.skills-ides-logos-container {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C7C6C6;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+.skills-ides-logos-container img {
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid blue;
+}
+
+.skills-tools-logos-container {
+    padding: 20px;
+    align-items: center;
+    background-color: #C7C6C6;
+}
+
+.skills-tools-logos-db img {
+    width: 45%;
+    margin-bottom: 10px;
+    border: 1px solid blue;
+}
+
+.skills-tools-logos-db {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-tools-postman {
+    padding: 0 20px;
+}
+
+.skills-tools-postman img {
+    width: 100%;
+}

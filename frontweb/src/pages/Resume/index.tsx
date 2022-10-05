@@ -1,11 +1,35 @@
+import Courses from './Courses';
+import PersonalInfo from './PersonalInfo';
+import Skills from './Skills';
 import './styles.css';
 
 const Resume = () => {
-    return (
-        <div className='bg'>
-            <h1>Resume Page</h1>
+  return (
+    <div className="bg resume-container">
+      <div className="base-card resume-card-container">
+        <div className="resume-image-button-container">
+          <div className="resume-image-container"></div>
+          <button className="base-button resume-button-container">
+            BAIXAR CURRÍCULO
+          </button>
         </div>
-    );
-}
+        <PersonalInfo />
+      </div>
+
+      <div className="base-card resume-courses-container">
+        <h1>CURSOS COMPLEMENTARES:</h1>
+        <Courses />
+        <Courses />
+        <Courses />
+        <Courses />
+      </div>
+
+      <div className='base-card skills-container'>
+        <h1>CONHECIMENTOS:</h1>
+        <Skills />
+      </div>
+    </div>
+  );
+};
 
 export default Resume;

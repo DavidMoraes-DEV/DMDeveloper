@@ -4,13 +4,13 @@
   color: #fff;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: Alegreya Sans SC;
   font-weight: 700;
   margin-bottom: 0;
 }
 
-h3, h4,h5, h6 {
+h4,h5, h6 {
   font-family: Barlow;
   font-weight: 700;
   margin-bottom: 0;
@@ -40,4 +40,9 @@ a, a:hover {
   border-radius: 5px;
   font-weight: 500;
   background-color: #2D569D;
+}
+
+.base-card {
+  border-radius: 10px;
+  background-color: #1A1A1A;
 }
