@@ -1,9 +1,23 @@
+import ProjectCard from './ProjectCard/indext';
 import './styles.css';
 
 const Projects = () => {
   return (
-    <div className="bg">
-      <h1>Projects page</h1>
+    <div className="bg projects-container">
+      <div className="row projects-itens-container">
+        <div className='col-sm-6 col-lg-12 projects-item-container'>
+          <ProjectCard />
+        </div>
+        <div className='col-sm-6 col-lg-12 projects-item-container'>
+          <ProjectCard />
+        </div>
+        <div className='col-sm-6 col-lg-12 projects-item-container'>
+          <ProjectCard />
+        </div>
+        <div className='col-sm-6 col-lg-12 projects-item-container'>
+          <ProjectCard />
+        </div>
+      </div>
     </div>
   );
 };
