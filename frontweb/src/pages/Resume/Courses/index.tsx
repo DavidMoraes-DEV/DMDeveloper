@@ -8,7 +8,7 @@ const Courses = () => {
               ABRIR CERTIFICADO
             </button>
           </div>
-          <div className="mb-2 resume-info-content">
+          <div className="mb-2 resume-courses-info-content">
             <h4>
               Instituição: <span>Geek University</span>
             </h4>

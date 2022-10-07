@@ -32,3 +32,106 @@
     font-weight: normal;
     color: white;
 }
+
+.resume-info-course-duration-container {
+    display: flex;
+    border: 1px solid yellow;
+}
+
+.resume-info-course-duration-container h4 {
+    margin-right: 15px;
+    border: 1px solid orange;
+}
+
+.resume-info-course-situation-container {
+    display: flex;
+    border: 1px solid red;
+}
+
+.resume-info-course-situation-container h4 {
+    margin-right: 7px;
+    border: 1px solid orange;
+}
+
+@media (min-width: 576px) {
+    .resume-info-container h2 {
+        border-bottom: 3px solid #A0A0A0;
+    }
+
+    .resume-info-container h2 {
+        font-size: 30px;
+    }
+
+    .resume-info-content h3 {
+        font-size: 25px;
+    }
+
+    .resume-info-content h4 {
+        font-size: 17px;
+    }
+
+    .resume-info-course-duration-container h4 {
+        margin-right: 69px;
+    }
+
+    .resume-info-course-situation-container h4 {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .resume-personal-info-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) {
+    .resume-info-container {
+        flex: 1;
+        margin-left: 20px;    
+    }
+
+    .resume-info-container h2 {
+        font-size: 27px;
+    }
+
+    .resume-info-content {
+        width: 100%;
+    }
+
+    .resume-info-content h3 {
+        font-size: 23px;
+    }
+
+    .resume-info-content h4 {
+        font-size: 15px;
+    }
+
+    .resume-info-course-container {
+        display: flex;
+    }
+
+    .resume-info-course-container h4 {
+        margin-top: 1px;
+        border: 1px solid red;
+    }
+
+    .resume-info-course-duration-container h4 {
+        margin: 0 0 0 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .resume-info-container h2 {
+        font-size: 31px;
+    }
+
+    .resume-info-content h3 {
+        font-size: 22px;
+    }
+
+    .resume-info-content h4 {
+        font-size: 18px;
+    }
+}

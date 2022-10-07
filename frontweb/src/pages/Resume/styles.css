@@ -7,7 +7,14 @@ h1 {
 .resume-container {
     padding: 20px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid red;
+}
+
+.resume-infos-container {
+    border: 1px solid white;
 }
 
 .resume-card-container {
@@ -20,12 +27,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 40px;
+    padding: 10px;
     border: 1px solid blue;
 }
 
 .resume-image-container {
-    width: 100%;
+    width: 155px;
     height: 150px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -34,7 +41,7 @@ h1 {
 }
 
 .resume-button-container {
-    width: 100%;
+    width: 155px;
     height: 30px;
     font-size: 11px;
     background-color: #2D569D;
@@ -52,6 +59,120 @@ h1 {
 }
 
 .skills-container {
-    padding: 20px;
+    width: 100%;
+    padding: 20px 20px 3px 20px;
     border: 1px solid yellow;
+}
+
+@media (min-width: 576px) {
+    .resume-container {
+        padding: 30px 50px;
+    }
+
+    .resume-infos-container {
+        width: 100%;
+    }
+
+    .resume-card-container {
+        padding: 30px;
+    }
+
+    .resume-image-button-container {
+        padding: 20px;
+    }
+
+    .resume-image-container {
+        width: 180px;
+        height: 175px;
+    }
+
+    .resume-button-container {
+        width: 180px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .resume-courses-container {
+        font-size: 18px;
+        padding: 30px 30px 6px 30px;
+    }
+
+    .resume-courses-container h1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .skills-container {
+        padding: 30px;
+    }
+
+    .skills-container h1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .resume-container {
+        padding: 40px 70px;
+    }
+
+    .resume-infos-container {
+        max-width: 700px;
+    }
+
+    .resume-card-container {
+        margin-bottom: 40px;
+    }
+
+    .resume-courses-container {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .resume-container {
+        padding: 50px 70px;
+    }
+
+    .resume-card-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .resume-infos-container {
+        max-width: 100%;
+    }
+
+    .resume-image-button-container {
+        justify-content: center;
+    }
+
+    .resume-image-container {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .skills-container {
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .resume-container {
+        padding: 50px 120px;
+    }
+
+    .resume-infos-container {
+        max-width: 1150px;
+    }
+
+    .resume-courses-container {
+        padding: 30px 60px 10px 60px;
+    }
+
+    .skills-container {
+        padding: 30px 60px 0 60px;
+    }
 }

@@ -46,23 +46,27 @@ const PersonalInfo = () => {
           Instituição:{' '}
           <span>UNIFAMMA - Faculdade Metropolitana de Maringá</span>
         </h4>
-        <div className="resume-info-course-container">
+        <span className="resume-info-course-container">
           <h4>
             Curso: <span>Engenharia de Software</span>
           </h4>
-          <h4>
-            Inicio: <span>02/2019</span>
-          </h4>
-          <h4>
-            Término: <span>06/2023</span>
-          </h4>
-        </div>
+          <span className='resume-info-course-duration-container'>
+            <h4>
+              Inicio: <span>02/2019</span>
+            </h4>
+            <h4>
+              Término: <span>06/2023</span>
+            </h4>
+          </span>
+        </span>
+        <span className='resume-info-course-situation-container'>
         <h4>
           Situação: <span>Cursando</span>
         </h4>
         <h4>
           Duração: <span>4 Anos</span>
         </h4>
+        </span>
       </div>
     </div>
   );
