@@ -137,8 +137,9 @@ h1 {
 
     .resume-card-container {
         width: 100%;
+        padding: 30px 20px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .resume-infos-container {
@@ -162,6 +163,10 @@ h1 {
 @media (min-width: 1200px) {
     .resume-container {
         padding: 50px 120px;
+    }
+
+    .resume-card-container {
+        padding: 30px 50px;
     }
 
     .resume-infos-container {

@@ -2,10 +2,10 @@ import './styles.css';
 
 const Courses = () => {
     return (
-        <div className="resume-courses-content">
+        <div className="col-lg-6 resume-courses-content">
           <div className="button-container">
             <button className="base-button resume-course-button-container">
-              ABRIR CERTIFICADO
+              CERTIFICADO
             </button>
           </div>
           <div className="mb-2 resume-courses-info-content">

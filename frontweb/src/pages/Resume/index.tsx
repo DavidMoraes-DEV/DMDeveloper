@@ -6,7 +6,7 @@ import './styles.css';
 const Resume = () => {
   return (
     <div className="bg resume-container">
-      <span className='resume-infos-container'>
+      <span className="resume-infos-container">
         <div className="base-card resume-card-container">
           <div className="resume-image-button-container">
             <div className="resume-image-container"></div>
@@ -19,10 +19,12 @@ const Resume = () => {
 
         <div className="base-card resume-courses-container">
           <h1>CURSOS COMPLEMENTARES:</h1>
-          <Courses />
-          <Courses />
-          <Courses />
-          <Courses />
+          <div className='row'>
+            <Courses />
+            <Courses />
+            <Courses />
+            <Courses />
+          </div>
         </div>
 
         <div className="base-card skills-container">

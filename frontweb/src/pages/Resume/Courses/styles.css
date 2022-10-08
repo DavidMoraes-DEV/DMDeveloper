@@ -59,7 +59,7 @@
     }
 
     .resume-courses-info-content h4 {
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 
@@ -84,22 +84,14 @@
     .resume-courses-content {
         justify-content: space-evenly;
     }
+
+    .resume-course-button-container {
+        width: 120px;
+    }
 }
 
 @media (min-width: 1200px) {
     .resume-courses-content {
         margin-bottom: 15px;
-    }
-
-    .resume-courses-info-content h4 {
-        font-size: 20px;
-    }
-
-    .button-container {
-        width: 230px;
-    }
-
-    .resume-course-button-container {
-        width: 100%;
     }
 }
