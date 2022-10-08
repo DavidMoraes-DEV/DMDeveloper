@@ -4,7 +4,7 @@ const Courses = () => {
     return (
         <div className="col-lg-6 resume-courses-content">
           <div className="button-container">
-            <button className="base-button resume-course-button-container">
+            <button className="btn base-button resume-course-button-container">
               CERTIFICADO
             </button>
           </div>

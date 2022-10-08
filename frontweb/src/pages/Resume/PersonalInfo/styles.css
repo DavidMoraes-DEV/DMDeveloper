@@ -84,6 +84,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .resume-info-content {
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -95,10 +99,6 @@
 
     .resume-info-container h2 {
         font-size: 27px;
-    }
-
-    .resume-info-content {
-        width: 100%;
     }
 
     .resume-info-content h3 {

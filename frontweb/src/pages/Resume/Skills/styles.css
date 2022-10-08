@@ -72,26 +72,24 @@
     background-color: #C7C6C6;
 }
 
-.skills-backend-logos-container {
-    padding: 15px 10px 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills-backend-logos-content {
+.skills-logos-container {
     width: 100%;
+    padding: 15px 10px 0 10px;
+    margin: 0;
     border: 1px solid red;
 }
 
-.logos-backend-container {
-    width: 100%;
+.skills-logo {
+    padding: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    border: 1px solid purple;
+    margin-bottom: 15px;
+    border: 1px solid green;
+}
+
+.skills-backend-logo img {
+    border: 1px solid blue;
 }
 
 .skills-frontweb-content {
@@ -145,14 +143,6 @@
         display: none;
     }
 
-    .skills-backend-logos-content {
-        display: flex;
-    }
-
-    .skills-backend-logos-container {
-        padding: 15px 10px 10px 10px;
-    }
-
     .skills-frontweb-content {
         display: flex;
     }
@@ -173,6 +163,10 @@
 
     .skills-ides-visual-studio {
         display: none;
+    }
+
+    .skills-backend-logos-container {
+        padding: 20px 20px 5px 20px;
     }
 }
 
@@ -195,12 +189,8 @@
         margin-bottom: 30px;
     }
 
-    .skills-backend-logos-container {
-        padding: 25px 30px 15px 30px;
+    .skills-logos-container {
+        padding: 25px 15px 15px 15px;
         margin-bottom: 30px;
-    }
-
-    .logos-backend-container {
-        margin-bottom: 15px;
     }
 }

@@ -7,7 +7,10 @@ const PersonalInfo = () => {
       <div className="resume-personal-info-container">
         <div className="resume-info-content">
           <h4>
-            Idade: <span>23 anos</span>
+            Nascimento: <span>20/06/1997</span>
+          </h4>
+          <h4>
+            Idade: <span>25 anos</span>
           </h4>
           <h4>
             Sexo: <span>Masculino</span>
@@ -16,24 +19,22 @@ const PersonalInfo = () => {
             Fone: <span>(44) 99158-5419</span>
           </h4>
           <h4>
-            Endereço: <span>Rua Lucio Tozini, nº 11</span>
-          </h4>
-          <h4>
-            CNH Categoria(s): <span>AB</span>
+            Email: <span>DavidMoraes-DEV@outlook.com</span>
           </h4>
         </div>
         <div className="resume-info-content">
-          <h4>
-            Nascimento: <span>20/06/97</span>
-          </h4>
+          
           <h4>
             Estado Civil: <span>Solteiro</span>
           </h4>
           <h4>
-            Email: <span>DavidMoraes-DEV@outlook.com</span>
+            Endereço: <span>Rua Lucio Tozini, nº 11</span>
           </h4>
           <h4>
             CEP: <span>86610-000 - Jaguapitã - PR</span>
+          </h4>
+          <h4>
+            CNH Categoria(s): <span>AB</span>
           </h4>
           <h4>
             Trabalhando atualmente? <span>Não</span>

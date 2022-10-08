@@ -10,7 +10,7 @@ const Resume = () => {
         <div className="base-card resume-card-container">
           <div className="resume-image-button-container">
             <div className="resume-image-container"></div>
-            <button className="base-button resume-button-container">
+            <button className="btn base-button resume-button-container">
               BAIXAR CURRÍCULO
             </button>
           </div>

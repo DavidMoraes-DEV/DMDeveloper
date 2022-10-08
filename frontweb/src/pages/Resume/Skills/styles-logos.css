@@ -1,265 +1,212 @@
 .logo-java {
-    width: 50px;
+  height: 55px;
 }
 
 .logo-spring-boot {
-    height: 45px;
+  height: 40px;
 }
 
 .logo-oauth {
-    width: 60px;
+  width: 60px;
 }
 
 .logo-jpa-hibernate {
-    height: 55px;
+  height: 55px;
 }
 
 .logo-maven {
-    height: 22px;
+  height: 28px;
 }
 
 .logo-jwt {
-    height: 30px;
+  height: 35px;
 }
 
 .logo-junit {
-    height: 25px;
+  height: 32px;
 }
 
 .logo-mockito {
-    height: 40px;
-}
-
-.logo-apex {
-    height: 35px;
-}
-
-.logo-axios {
-    height: 20px;
-}
-
-.logo-bootstrap {
-    height: 30px;
+  height: 45px;
 }
 
 .logo-html {
-    width: 40px;
+  height: 60px;
 }
 
 .logo-css {
-    width: 40px;
+    height: 60px;
 }
 
 .logo-js {
-    width: 40px;
+    height: 60px;
 }
 
-.logo-jest {
-    height: 28px;
+.logo-react {
+    height: 60px;
 }
 
-.logo-netlify {
+.logo-react-hook {
+    height: 60px;
+}
+
+.logo-react-hook-form {
+    height: 60px;
+}
+
+.logo-react-router {
+    height: 40px;
+}
+
+.logo-axios {
+  height: 22px;
+}
+
+.logo-bootstrap {
     height: 25px;
 }
 
 .logo-nodejs {
-    height: 32px;
-}
-
-.logo-react {
-    width: 45px;
-}
-
-.logo-react-hook {
-    width: 45px;
-}
-
-.logo-react-hook-form {
-    width: 65px;
-}
-
-.logo-react-router {
-    width: 75px;
+  height: 27px;
 }
 
 .logo-ts {
-    height: 28px;
+  height: 25px;
 }
 
-@media (min-width: 576px) {
-    .logo-java {
-        width: 40px;
-    }
+.logo-apex {
+    height: 27px;
+}
+  
+.logo-netlify {
+    height: 25px;
+}
 
-    .logo-oauth {
-        width: 50px;
-    }
-
-    .logo-jpa-hibernate {
-        height: 45px;
-    }
-
-    .logo-react-router {
-        width: 90px;
-    }
-
-    .logo-apex {
-        height: 45px;
-    }
-
-    .logo-netlify {
-        height: 35px;
-    }
-
-    .logo-jest {
-        height: 35px;
-    }
+.logo-jest {
+    height: 30px;
 }
 
 @media (min-width: 768px) {
-    .logo-java {
-        width: 50px;
-    }
+  .logo-java {
+    height: 60px;
+  }
 
-    .logo-spring-boot {
-        height: 55px;
-    }
+  .logo-spring-boot {
+    height: 50px;
+  }
 
-    .logo-maven {
-        height: 30px;
-    }
+  .logo-maven {
+    height: 30px;
+  }
 
-    .logo-jwt {
-        height: 40px;
-    }
+  .logo-jwt {
+    height: 40px;
+  }
 
-    .logo-oauth {
-        width: 70px;
-    }
+  .logo-oauth {
+    width: 70px;
+  }
 
-    .logo-jpa-hibernate {
-        height: 60px;
-    }
+  .logo-jpa-hibernate {
+    height: 60px;
+  }
 
-    .logo-junit {
-        height: 35px;
-    }
+  .logo-junit {
+    height: 35px;
+  }
 
-    .logo-mockito {
-        height: 50px;
-    }
+  .logo-mockito {
+    height: 50px;
+  }
 
-    .logo-html {
-        width: 50px;
-    }
-
-    .logo-css {
-        width: 50px;
-    }
-
-    .logo-js {
-        width: 50px;
-    }
-
-    .logo-react {
-        width: 60px;
-    }
-
-    .logo-bootstrap {
-        height: 40px;
-    }
-
-    .logo-react-hook {
-        width: 60px;
-    }
-
-    .logo-nodejs {
-        height: 40px;
-    }
-
-    .logo-react-hook-form {
-        width: 85px;
-    }
-
-    .logo-ts {
-        height: 35px;
-    }
-
-    .logo-react-router {
-        width: 110px;
-    }
-
-    .logo-axios {
-        height: 30px;
-    }
-
-    .logo-apex {
-        height: 55px;
-    }
-
-    .logo-netlify {
-        height: 45px;
-    }
-
-    .logo-jest {
-        height: 45px;
-    }
+  
+.logo-html {
+    height: 80px;
+  }
+  
+  .logo-css {
+      height: 80px;
+  }
+  
+  .logo-js {
+      height: 80px;
+  }
+  
+  .logo-react {
+      height: 80px;
+  }
+  
+  .logo-react-hook {
+      height: 80px;
+  }
+  
+  .logo-react-hook-form {
+      height: 80px;
+  }
+  
+  .logo-react-router {
+      height: 50px;
+  }
+  
+  .logo-axios {
+    height: 27px;
+  }
+  
+  .logo-bootstrap {
+      height: 30px;
+  }
+  
+  .logo-nodejs {
+    height: 30px;
+  }
+  
+  .logo-ts {
+    height: 30px;
+  }
+  
+  .logo-apex {
+      height: 32px;
+  }
+    
+  .logo-netlify {
+      height: 30px;
+  }
+  
+  .logo-jest {
+      height: 35px;
+  }
 }
 
 @media (min-width: 992px) {
-    .logo-mockito {
-        height: 60px;
-    }
+  .logo-java {
+    height: 80px;
+  }
 
-    .logo-html {
-        width: 55px;
-    }
+  .logo-spring-boot {
+    height: 65px;
+  }
 
-    .logo-css {
-        width: 55px;
-    }
+  .logo-maven {
+    height: 40px;
+  }
 
-    .logo-js {
-        width: 55px;
-    }
+  .logo-jwt {
+    height: 40px;
+  }
 
-    .logo-react {
-        width: 70px;
-    }
+  .logo-oauth {
+    width: 80px;
+  }
 
-    .logo-react-hook {
-        width: 70px;
-    }
+  .logo-jpa-hibernate {
+    height: 70px;
+  }
 
-    .logo-react-router {
-        width: 130px;
-    }
+  .logo-junit {
+    height: 45px;
+  }
 
-    .logo-axios {
-        height: 35px;
-    }
-
-    .logo-nodejs {
-        height: 45px;
-    }
-
-    .logo-react-hook-form {
-        width: 95px;
-    }
-
-    .logo-ts {
-        height: 40px;
-    }
-
-    .logo-apex {
-        height: 60px;
-    }
-
-    .logo-netlify {
-        height: 50px;
-    }
-
-    .logo-jest {
-        height: 50px;
-    }
+  .logo-mockito {
+    height: 60px;
+  }
 }
