@@ -9,22 +9,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_technology")
-public class Technology {
-	
+@Table(name = "tb_resume")
+public class Resume {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name;
-	private String imgIcon;
+	private String archive;
 	
-	public Technology () {
+	public Resume () {
 	}
 
-	public Technology(Long id, String name, String imgIcon) {
+	public Resume(Long id, String archive) {
 		this.id = id;
-		this.name = name;
-		this.imgIcon = imgIcon;
+		this.archive = archive;
 	}
 
 	public Long getId() {
@@ -35,20 +33,12 @@ public class Technology {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getArchive() {
+		return archive;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getImgIcon() {
-		return imgIcon;
-	}
-
-	public void setImgIcon(String imgIcon) {
-		this.imgIcon = imgIcon;
+	public void setArchive(String archive) {
+		this.archive = archive;
 	}
 
 	@Override
@@ -64,7 +54,7 @@ public class Technology {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Technology other = (Technology) obj;
+		Resume other = (Resume) obj;
 		return Objects.equals(id, other.id);
 	}
 	
