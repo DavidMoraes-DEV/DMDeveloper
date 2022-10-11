@@ -1,4 +1,3 @@
-import About from "pages/About";
 import Projects from "pages/Projects";
 import Resume from "pages/Resume";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -17,9 +16,6 @@ const Routes = () => (
             </Route>
             <Route path='/resume' exact>
                 <Resume />
-            </Route>
-            <Route path='/about' exact>
-                <About />
             </Route>
         </Switch>
     </BrowserRouter>

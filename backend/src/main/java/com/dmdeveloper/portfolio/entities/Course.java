@@ -1,6 +1,6 @@
 package com.dmdeveloper.portfolio.entities;
 
-import java.util.Date;
+import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -11,20 +11,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_course")
-public class Course {
-
+public class Course implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String institution;
-	private Date duration;
+	private Double duration;
 	private String certificate;
 	
 	public Course() {
 	}
 
-	public Course(Long id, String name, String institution, Date duration, String certificate) {
+	public Course(Long id, String name, String institution, Double duration, String certificate) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
@@ -56,11 +57,11 @@ public class Course {
 		this.institution = institution;
 	}
 
-	public Date getDuration() {
+	public Double getDuration() {
 		return duration;
 	}
 
-	public void setDuration(Date duration) {
+	public void setDuration(Double duration) {
 		this.duration = duration;
 	}
 

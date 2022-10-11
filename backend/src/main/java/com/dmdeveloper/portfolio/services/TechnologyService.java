@@ -1,11 +1,13 @@
 package com.dmdeveloper.portfolio.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.dmdeveloper.portfolio.dto.TechnologyDTO;
 import com.dmdeveloper.portfolio.entities.Technology;
 import com.dmdeveloper.portfolio.repositories.TechnologyRepository;
 
@@ -16,7 +18,8 @@ public class TechnologyService {
 	private TechnologyRepository repository;
 	
 	@Transactional(readOnly = true)
-	public List<Technology> findAll() {
-		return repository.findAll();
+	public List<TechnologyDTO> findAll() {
+		List<Technology> list = repository.findAll();
+		return list.stream().map(x -> new TechnologyDTO(x)).collect(Collectors.toList());
 	}
 }

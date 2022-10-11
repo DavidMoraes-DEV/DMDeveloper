@@ -1,5 +1,6 @@
 package com.dmdeveloper.portfolio.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
@@ -11,8 +12,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table( name = "tb_formation")
-public class Formation {
-
+public class Formation implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

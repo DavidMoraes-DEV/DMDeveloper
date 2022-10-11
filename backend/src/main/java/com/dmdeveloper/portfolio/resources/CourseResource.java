@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dmdeveloper.portfolio.entities.Course;
+import com.dmdeveloper.portfolio.dto.CourseDTO;
 import com.dmdeveloper.portfolio.services.CourseService;
 
 @RestController
@@ -21,9 +21,9 @@ public class CourseResource {
 	
 	@GetMapping
 	@Transactional(readOnly = true)
-	public ResponseEntity<List<Course>> findAll () {
+	public ResponseEntity<List<CourseDTO>> findAll () {
 		
-		List<Course> list = service.findAll();
+		List<CourseDTO> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);
 	}

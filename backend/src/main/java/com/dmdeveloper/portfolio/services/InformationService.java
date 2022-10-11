@@ -1,11 +1,13 @@
 package com.dmdeveloper.portfolio.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.dmdeveloper.portfolio.dto.InformationDTO;
 import com.dmdeveloper.portfolio.entities.Information;
 import com.dmdeveloper.portfolio.repositories.InformationRepository;
 
@@ -16,8 +18,10 @@ public class InformationService {
 	private InformationRepository repository;
 	
 	@Transactional(readOnly = true) 
-	public List<Information> findAll() {
-		return repository.findAll();
+	public List<InformationDTO> findAll() {
+		List<Information> list = repository.findAll();
+		
+		return list.stream().map(x -> new InformationDTO(x)).collect(Collectors.toList());
 	}
 	
 }

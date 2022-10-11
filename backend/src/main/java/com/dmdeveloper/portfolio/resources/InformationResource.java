@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dmdeveloper.portfolio.entities.Information;
+import com.dmdeveloper.portfolio.dto.InformationDTO;
 import com.dmdeveloper.portfolio.services.InformationService;
 
 @RestController
@@ -19,8 +19,8 @@ public class InformationResource {
 	private InformationService service;
 	
 	@GetMapping
-	private ResponseEntity<List<Information>> findAll () {
-		List<Information> list = service.findAll();
+	private ResponseEntity<List<InformationDTO>> findAll () {
+		List<InformationDTO> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);
 	}

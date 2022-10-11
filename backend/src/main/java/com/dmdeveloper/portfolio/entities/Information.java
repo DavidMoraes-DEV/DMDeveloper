@@ -1,5 +1,6 @@
 package com.dmdeveloper.portfolio.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
@@ -11,14 +12,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_information")
-public class Information {
-	
+public class Information implements Serializable {
+	private static final long serialVersionUID = 1L;
+			
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private Date birthDate;
-	private Integer age;
 	private String genre;
 	private String phone;
 	private String email;
@@ -31,13 +32,11 @@ public class Information {
 	public Information () {
 	}
 
-	public Information(Long id, String name, Date birthDate, Integer age, String genre, String phone, String email,
+	public Information(Long id, String name, Date birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
-		this.age = age;
 		this.genre = genre;
 		this.phone = phone;
 		this.email = email;
@@ -70,14 +69,6 @@ public class Information {
 
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
 	}
 
 	public String getGenre() {

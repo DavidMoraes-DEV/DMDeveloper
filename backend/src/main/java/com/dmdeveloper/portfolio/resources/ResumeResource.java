@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dmdeveloper.portfolio.entities.Resume;
+import com.dmdeveloper.portfolio.dto.ResumeDTO;
 import com.dmdeveloper.portfolio.services.ResumeService;
 
 @RestController
@@ -19,8 +19,8 @@ public class ResumeResource {
 	private ResumeService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Resume>> findAll() {
-		List<Resume> list = service.findAll();
+	public ResponseEntity<List<ResumeDTO>> findAll() {
+		List<ResumeDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 }

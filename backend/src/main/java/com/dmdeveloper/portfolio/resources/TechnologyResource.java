@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dmdeveloper.portfolio.entities.Technology;
+import com.dmdeveloper.portfolio.dto.TechnologyDTO;
 import com.dmdeveloper.portfolio.services.TechnologyService;
 
 @RestController
@@ -19,8 +19,8 @@ public class TechnologyResource {
 	private TechnologyService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Technology>> findAll () {
-		List<Technology> list = service.findAll();
+	public ResponseEntity<List<TechnologyDTO>> findAll () {
+		List<TechnologyDTO> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);
 	}

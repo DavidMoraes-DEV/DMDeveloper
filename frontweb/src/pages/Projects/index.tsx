@@ -1,4 +1,4 @@
-import ProjectCard from './ProjectCard/indext';
+import ProjectCard from './ProjectCard/index';
 import './styles.css';
 
 const Projects = () => {

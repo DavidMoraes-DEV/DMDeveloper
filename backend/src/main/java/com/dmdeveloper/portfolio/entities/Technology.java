@@ -1,5 +1,6 @@
 package com.dmdeveloper.portfolio.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -10,21 +11,22 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_technology")
-public class Technology {
+public class Technology implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String imgIcon;
+	private String imgUrl;
 	
 	public Technology () {
 	}
 
-	public Technology(Long id, String name, String imgIcon) {
+	public Technology(Long id, String name, String imgUrl) {
 		this.id = id;
 		this.name = name;
-		this.imgIcon = imgIcon;
+		this.imgUrl = imgUrl;
 	}
 
 	public Long getId() {
@@ -43,12 +45,12 @@ public class Technology {
 		this.name = name;
 	}
 
-	public String getImgIcon() {
-		return imgIcon;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setImgIcon(String imgIcon) {
-		this.imgIcon = imgIcon;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
 	@Override

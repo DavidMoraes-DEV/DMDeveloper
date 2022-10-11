@@ -1,5 +1,6 @@
 package com.dmdeveloper.portfolio.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -10,19 +11,20 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_resume")
-public class Resume {
-
+public class Resume implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String archive;
+private String fileUrl;
 	
 	public Resume () {
 	}
 
-	public Resume(Long id, String archive) {
+	public Resume(Long id, String fileUrl) {
 		this.id = id;
-		this.archive = archive;
+		this.fileUrl = fileUrl;
 	}
 
 	public Long getId() {
@@ -33,14 +35,14 @@ public class Resume {
 		this.id = id;
 	}
 
-	public String getArchive() {
-		return archive;
+	public String getFileUrl() {
+		return fileUrl;
 	}
 
-	public void setArchive(String archive) {
-		this.archive = archive;
+	public void setFileUrl(String fileUrl) {
+		this.fileUrl = fileUrl;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
