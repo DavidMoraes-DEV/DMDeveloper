@@ -1,7 +1,10 @@
 package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.dmdeveloper.portfolio.entities.Category;
 import com.dmdeveloper.portfolio.entities.Technology;
 
 public class TechnologyDTO implements Serializable {
@@ -11,7 +14,15 @@ public class TechnologyDTO implements Serializable {
 	private String name;
 	private String imgUrl;
 	
+	private Set<CategoryDTO> categories = new HashSet<>();
+	
 	public TechnologyDTO() {
+	}
+	
+	public TechnologyDTO(Long id, String name, String imgUrl) {
+		this.id = id;
+		this.name = name;
+		this.imgUrl = imgUrl;
 	}
 	
 	public TechnologyDTO(Technology entity) {
@@ -20,10 +31,9 @@ public class TechnologyDTO implements Serializable {
 		imgUrl = entity.getImgUrl();
 	}
 
-	public TechnologyDTO(Long id, String name, String imgUrl) {
-		this.id = id;
-		this.name = name;
-		this.imgUrl = imgUrl;
+	public TechnologyDTO(Technology entity, Set<Category> categories) {
+		this(entity);
+		categories.forEach(cat -> this.categories.add(new CategoryDTO(cat)));
 	}
 
 	public Long getId() {
@@ -49,5 +59,8 @@ public class TechnologyDTO implements Serializable {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	
+
+	public Set<CategoryDTO> getCategories() {
+		return categories;
+	}
 }

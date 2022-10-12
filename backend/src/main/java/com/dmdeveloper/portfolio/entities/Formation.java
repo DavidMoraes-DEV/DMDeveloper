@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,15 +21,18 @@ public class Formation implements Serializable {
 	private Long id;
 	private String name;
 	private String institution;
-	private Date start;
-	private Date end;
 	private String status;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Date start;
+	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Date end;
 	
 	public Formation () {
 	}
 
 	public Formation(Long id, String name, String institution, Date start, Date end, String status) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.institution = institution;

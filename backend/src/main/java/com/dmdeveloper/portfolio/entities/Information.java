@@ -4,10 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,7 +21,6 @@ public class Information implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private Date birthDate;
 	private String genre;
 	private String phone;
 	private String email;
@@ -29,11 +30,17 @@ public class Information implements Serializable {
 	private String state;
 	private String cnh;
 	
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Date birthDate;
+	
+	@OneToOne(mappedBy = "information")
+	private Resume resume;
+	
 	public Information () {
 	}
 
 	public Information(Long id, String name, Date birthDate, String genre, String phone, String email,
-			String address, String cep, String city, String state, String cnh) {
+			String address, String cep, String city, String state, String cnh, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
@@ -45,6 +52,7 @@ public class Information implements Serializable {
 		this.city = city;
 		this.state = state;
 		this.cnh = cnh;
+		this.resume = resume;
 	}
 
 	public Long getId() {
@@ -133,6 +141,14 @@ public class Information implements Serializable {
 
 	public void setCnh(String cnh) {
 		this.cnh = cnh;
+	}
+
+	public Resume getResume() {
+		return resume;
+	}
+
+	public void setResume(Resume resume) {
+		this.resume = resume;
 	}
 
 	@Override

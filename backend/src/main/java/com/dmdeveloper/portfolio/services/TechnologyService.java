@@ -20,6 +20,6 @@ public class TechnologyService {
 	@Transactional(readOnly = true)
 	public List<TechnologyDTO> findAll() {
 		List<Technology> list = repository.findAll();
-		return list.stream().map(x -> new TechnologyDTO(x)).collect(Collectors.toList());
+		return list.stream().map(x -> new TechnologyDTO(x, x.getCategories())).collect(Collectors.toList());
 	}
 }

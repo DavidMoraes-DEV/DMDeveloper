@@ -1,12 +1,18 @@
 package com.dmdeveloper.portfolio.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,14 +23,31 @@ public class Resume implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-private String fileUrl;
+	private String fileUrl;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "information_id", referencedColumnName = "id")
+	private Information information;
+	
+	@OneToMany
+	@JoinColumn(name = "resume_id")
+	private Set<Formation> formations = new HashSet<>();
+	
+	@OneToMany
+	@JoinColumn(name = "resume_id")
+	private Set<Course> courses = new HashSet<>();
+	
+	@OneToMany
+	@JoinColumn(name = "resume_id")
+	private Set<Technology> technologies = new HashSet<>();
 	
 	public Resume () {
 	}
 
-	public Resume(Long id, String fileUrl) {
+	public Resume(Long id, String fileUrl, Information information) {
 		this.id = id;
 		this.fileUrl = fileUrl;
+		this.information = information;
 	}
 
 	public Long getId() {
@@ -41,6 +64,26 @@ private String fileUrl;
 
 	public void setFileUrl(String fileUrl) {
 		this.fileUrl = fileUrl;
+	}
+	
+	public Information getInformation() {
+		return information;
+	}
+
+	public void setInformation(Information information) {
+		this.information = information;
+	}
+
+	public Set<Formation> getFormations() {
+		return formations;
+	}
+
+	public Set<Course> getCourses() {
+		return courses;
+	}
+	
+	public Set<Technology> getTechnologies() {
+		return technologies;
 	}
 	
 	@Override
