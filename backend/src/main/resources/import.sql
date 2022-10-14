@@ -4,40 +4,40 @@ INSERT INTO tb_resume (file_url, personal_info_id) VALUES ('https://github.com/D
 
 INSERT INTO tb_category (name) VALUES ('IDES');
 INSERT INTO tb_category (name) VALUES ('Tools');
-INSERT INTO tb_category (name) VALUES ('Tec Backend');
-INSERT INTO tb_category (name) VALUES ('Tec Frontweb');
+INSERT INTO tb_category (name) VALUES ('Backend');
+INSERT INTO tb_category (name) VALUES ('Frontweb');
 
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('H2', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-h2.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('MySQL Workbench', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-mysql-workbench.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Postman', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-postman.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('h2', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-tools/logo-h2.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('mysql-workbench', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-tools/logo-mysql-workbench.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('postman', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-tools/logo-postman.png', 1);
 
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Spring Tools', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-spring-tools.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Visual Studio Code', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-visual-studio-code.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Visual Studio', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/softwares/logo-visual-studio.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('spring-tools', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-ides/logo-spring-tools.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('visual-studio-code', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-ides/logo-visual-studio-code.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('visual-studio', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-ides/logo-visual-studio.png', 1);
 
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Java', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-java.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('JPA Hibernate', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-jpa-hibernate.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('JUnit5', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-junit-5.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('JWT', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-jwt.pnh', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Maven', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-maven.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Mockito', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-mockito.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('OAuth2', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-oauth-2.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Spring Boot', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-backend/logo-spring-boot.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('java', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-java.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('jpa-hibernate', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-jpa-hibernate.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('junit5', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-junit-5.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('jwt', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-jwt.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('maven', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-maven.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('mockito', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-mockito.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('oauth2', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-oauth-2.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('spring-boot', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-backend/logo-spring-boot.png', 1);
 
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Apex Charts', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-apex-charts.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Axios', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-axios.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Bootstrap', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-bootstrap.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('CSS', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-css.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('HTML', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-html.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Jest', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-jest.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('JS', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-js.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Netlify', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-netlify.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('NodeJS', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-nodejs.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('React Hook Form', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-react-hook-form.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Reack Hook', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-react-hook.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('React Router', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-react-router.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('React', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-react.png', 1);
-INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('Typescript', 'https://github.com/DavidMoraes-DEV/DMDeveloper/blob/master/frontweb/src/assets/images/logo-tecnologias/tecnologias-frontweb/logo-typescript.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('apex-charts', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-apex-charts.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('axios', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-axios.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('bootstrap', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-bootstrap.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('css', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-css.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('html', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-html.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('jest', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-jest.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('js', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-js.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('netlify', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-netlify.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('nodejs', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-nodejs.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('react-hook-form', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-react-hook-form.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('react-hook', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-react-hook.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('react-router', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-react-router.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('react', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-react.png', 1);
+INSERT INTO tb_skill (name, img_url, resume_id) VALUES ('typescript', 'https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/images/logos-technologies/tec-frontweb/logo-typescript.png', 1);
 
 INSERT INTO tb_skill_category (skill_id, category_id) VALUES (1, 2);
 INSERT INTO tb_skill_category (skill_id, category_id) VALUES (2, 2);
