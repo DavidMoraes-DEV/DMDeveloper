@@ -12,7 +12,7 @@ import com.dmdeveloper.portfolio.dto.ResumeDTO;
 import com.dmdeveloper.portfolio.services.ResumeService;
 
 @RestController
-@RequestMapping(value = "/resumes")
+@RequestMapping(value = "/resume")
 public class ResumeResource {
 
 	@Autowired

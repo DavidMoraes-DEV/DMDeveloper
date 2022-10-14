@@ -16,8 +16,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_technology")
-public class Technology implements Serializable {
+@Table(name = "tb_skill")
+public class Skill implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -27,15 +27,15 @@ public class Technology implements Serializable {
 	private String imgUrl;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "tb_technology_category",
-			joinColumns = @JoinColumn(name = "technology_id"),
+	@JoinTable(name = "tb_skill_category",
+			joinColumns = @JoinColumn(name = "skill_id"),
 			inverseJoinColumns = @JoinColumn(name = "category_id"))
 	private Set<Category> categories = new HashSet<>();
 	
-	public Technology () {
+	public Skill () {
 	}
 
-	public Technology(Long id, String name, String imgUrl) {
+	public Skill(Long id, String name, String imgUrl) {
 		this.id = id;
 		this.name = name;
 		this.imgUrl = imgUrl;
@@ -82,7 +82,7 @@ public class Technology implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Technology other = (Technology) obj;
+		Skill other = (Skill) obj;
 		return Objects.equals(id, other.id);
 	}
 	

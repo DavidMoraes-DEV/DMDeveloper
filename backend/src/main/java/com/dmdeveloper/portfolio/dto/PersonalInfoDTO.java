@@ -3,9 +3,9 @@ package com.dmdeveloper.portfolio.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.dmdeveloper.portfolio.entities.Information;
+import com.dmdeveloper.portfolio.entities.PersonalInfo;
 
-public class InformationDTO implements Serializable {
+public class PersonalInfoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
@@ -20,10 +20,10 @@ public class InformationDTO implements Serializable {
 	private String state;
 	private String cnh;
 	
-	public InformationDTO () {
+	public PersonalInfoDTO () {
 	}
 
-	public InformationDTO (Information entity) {
+	public PersonalInfoDTO (PersonalInfo entity) {
 		id = entity.getId();
 		name = entity.getName();
 		birthDate = entity.getBirthDate();
@@ -38,7 +38,7 @@ public class InformationDTO implements Serializable {
 	}
 
 	
-	public InformationDTO (Long id, String name, Date birthDate, String genre, String phone, String email,
+	public PersonalInfoDTO (Long id, String name, Date birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh) {
 		this.id = id;
 		this.name = name;

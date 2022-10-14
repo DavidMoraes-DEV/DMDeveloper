@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.dmdeveloper.portfolio.entities.Category;
-import com.dmdeveloper.portfolio.entities.Technology;
+import com.dmdeveloper.portfolio.entities.Skill;
 
-public class TechnologyDTO implements Serializable {
+public class SkillDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
@@ -16,22 +16,22 @@ public class TechnologyDTO implements Serializable {
 	
 	private Set<CategoryDTO> categories = new HashSet<>();
 	
-	public TechnologyDTO() {
+	public SkillDTO() {
 	}
 	
-	public TechnologyDTO(Long id, String name, String imgUrl) {
+	public SkillDTO(Long id, String name, String imgUrl) {
 		this.id = id;
 		this.name = name;
 		this.imgUrl = imgUrl;
 	}
 	
-	public TechnologyDTO(Technology entity) {
+	public SkillDTO(Skill entity) {
 		id = entity.getId();
 		name = entity.getName();
 		imgUrl = entity.getImgUrl();
 	}
 
-	public TechnologyDTO(Technology entity, Set<Category> categories) {
+	public SkillDTO(Skill entity, Set<Category> categories) {
 		this(entity);
 		categories.forEach(cat -> this.categories.add(new CategoryDTO(cat)));
 	}

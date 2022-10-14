@@ -23,7 +23,7 @@ public class Category implements Serializable {
 	private String name;
 	
 	@ManyToMany(mappedBy = "categories")
-	private Set<Technology> technologies = new HashSet<>();
+	private Set<Skill> technologies = new HashSet<>();
 	
 	public Category () {
 	}
@@ -49,7 +49,7 @@ public class Category implements Serializable {
 		this.name = name;
 	}
 	
-	public Set<Technology> getTechnologies() {
+	public Set<Skill> getTechnologies() {
 		return technologies;
 	}
 

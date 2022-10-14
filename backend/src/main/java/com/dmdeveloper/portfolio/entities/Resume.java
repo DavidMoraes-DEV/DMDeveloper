@@ -26,8 +26,8 @@ public class Resume implements Serializable {
 	private String fileUrl;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "information_id", referencedColumnName = "id")
-	private Information information;
+	@JoinColumn(name = "personal_info_id", referencedColumnName = "id")
+	private PersonalInfo personalInfo;
 	
 	@OneToMany
 	@JoinColumn(name = "resume_id")
@@ -39,15 +39,15 @@ public class Resume implements Serializable {
 	
 	@OneToMany
 	@JoinColumn(name = "resume_id")
-	private Set<Technology> technologies = new HashSet<>();
+	private Set<Skill> skills = new HashSet<>();
 	
 	public Resume () {
 	}
 
-	public Resume(Long id, String fileUrl, Information information) {
+	public Resume(Long id, String fileUrl, PersonalInfo personalInfo) {
 		this.id = id;
 		this.fileUrl = fileUrl;
-		this.information = information;
+		this.personalInfo = personalInfo;
 	}
 
 	public Long getId() {
@@ -66,12 +66,12 @@ public class Resume implements Serializable {
 		this.fileUrl = fileUrl;
 	}
 	
-	public Information getInformation() {
-		return information;
+	public PersonalInfo getPersonalInfo() {
+		return personalInfo;
 	}
 
-	public void setInformation(Information information) {
-		this.information = information;
+	public void setPersonalInfo(PersonalInfo personalInfo) {
+		this.personalInfo = personalInfo;
 	}
 
 	public Set<Formation> getFormations() {
@@ -82,8 +82,8 @@ public class Resume implements Serializable {
 		return courses;
 	}
 	
-	public Set<Technology> getTechnologies() {
-		return technologies;
+	public Set<Skill> getSkills() {
+		return skills;
 	}
 	
 	@Override

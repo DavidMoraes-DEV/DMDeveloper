@@ -21,6 +21,6 @@ public class ResumeService {
 	public List<ResumeDTO> findAll () {
 		List<Resume> list = repository.findAll();
 	
-		return list.stream().map(x -> new ResumeDTO(x, x.getFormations(), x.getCourses(), x.getTechnologies())).collect(Collectors.toList());
+		return list.stream().map(x -> new ResumeDTO(x, x.getFormations(), x.getCourses(), x.getSkills())).collect(Collectors.toList());
 	}
 }

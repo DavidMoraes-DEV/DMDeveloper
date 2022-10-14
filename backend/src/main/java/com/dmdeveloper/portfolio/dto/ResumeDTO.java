@@ -6,43 +6,43 @@ import java.util.Set;
 
 import com.dmdeveloper.portfolio.entities.Course;
 import com.dmdeveloper.portfolio.entities.Formation;
-import com.dmdeveloper.portfolio.entities.Information;
+import com.dmdeveloper.portfolio.entities.PersonalInfo;
 import com.dmdeveloper.portfolio.entities.Resume;
-import com.dmdeveloper.portfolio.entities.Technology;
+import com.dmdeveloper.portfolio.entities.Skill;
 
 public class ResumeDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String fileUrl;
-	private InformationDTO information;
+	private PersonalInfoDTO personalInfo;
 	
 	private Set<FormationDTO> formations = new HashSet<>();
 	
 	private Set<CourseDTO> courses = new HashSet<>();
 	
-	private Set<TechnologyDTO> technologies = new HashSet<>();
+	private Set<SkillDTO> skills = new HashSet<>();
 	
 	public ResumeDTO () {
 	}
 
-	public ResumeDTO(Long id, String fileUrl, Information information) {
+	public ResumeDTO(Long id, String fileUrl, PersonalInfo personalInfo) {
 		this.id = id;
 		this.fileUrl = fileUrl;
-		this.information = new InformationDTO(information);
+		this.personalInfo = new PersonalInfoDTO(personalInfo);
 	}
 	
 	public ResumeDTO(Resume entity) {
 		id = entity.getId();
 		fileUrl = entity.getFileUrl();
-		information = new InformationDTO(entity.getInformation());
+		personalInfo = new PersonalInfoDTO(entity.getPersonalInfo());
 	}
 
-	public ResumeDTO(Resume entity, Set<Formation> formations, Set<Course> courses, Set<Technology> technologies) {
+	public ResumeDTO(Resume entity, Set<Formation> formations, Set<Course> courses, Set<Skill> skills) {
 		this(entity);
 		formations.forEach(formation -> this.formations.add(new FormationDTO(formation)));
 		courses.forEach(course -> this.courses.add(new CourseDTO(course)));
-		technologies.forEach(tec -> this.technologies.add(new TechnologyDTO(tec, tec.getCategories())));
+		skills.forEach(tec -> this.skills.add(new SkillDTO(tec, tec.getCategories())));
 	}
 
 	public Long getId() {
@@ -61,12 +61,12 @@ public class ResumeDTO implements Serializable {
 		this.fileUrl = fileUrl;
 	}
 
-	public InformationDTO getInformation() {
-		return information;
+	public PersonalInfoDTO getPersonalInfo() {
+		return personalInfo;
 	}
 
-	public void setInformationDTO(InformationDTO information) {
-		this.information = information;
+	public void setInformationDTO(PersonalInfoDTO personalInfo) {
+		this.personalInfo = personalInfo;
 	}
 
 	public Set<FormationDTO> getFormations() {
@@ -77,8 +77,8 @@ public class ResumeDTO implements Serializable {
 		return courses;
 	}
 	
-	public Set<TechnologyDTO> getTechonologies() {
-		return technologies;
+	public Set<SkillDTO> getSkills() {
+		return skills;
 	}
 	
 }

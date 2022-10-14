@@ -13,8 +13,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_information")
-public class Information implements Serializable {
+@Table(name = "tb_personal_info")
+public class PersonalInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
 			
 	@Id
@@ -33,13 +33,13 @@ public class Information implements Serializable {
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Date birthDate;
 	
-	@OneToOne(mappedBy = "information")
+	@OneToOne(mappedBy = "personalInfo")
 	private Resume resume;
 	
-	public Information () {
+	public PersonalInfo () {
 	}
 
-	public Information(Long id, String name, Date birthDate, String genre, String phone, String email,
+	public PersonalInfo(Long id, String name, Date birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh, Resume resume) {
 		this.id = id;
 		this.name = name;
@@ -164,7 +164,7 @@ public class Information implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Information other = (Information) obj;
+		PersonalInfo other = (PersonalInfo) obj;
 		return Objects.equals(id, other.id);
 	}
 	
