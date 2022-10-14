@@ -1,0 +1,15 @@
+.skills-frontweb-container {
+    margin-bottom: 20px;
+    background-color: #C7C6C6;
+}
+
+.skills-frontweb-content {
+    width: 100%;
+    border: 1px solid orange;
+}
+
+@media (min-width: 576px) {
+    .skills-frontweb-content {
+        display: flex;
+    }
+}

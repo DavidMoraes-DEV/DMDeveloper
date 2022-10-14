@@ -14,7 +14,7 @@ const Home = () => {
           <NavLink to='/projects'>
             <button className='base-button home-card-button'>PROJETOS</button>
           </NavLink>
-          <NavLink to='/resume'>
+          <NavLink to='/resume/1'>
             <button className='base-button home-card-button'>CURRÍCULO</button>
           </NavLink>
         </div>

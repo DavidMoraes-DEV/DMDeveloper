@@ -1,40 +1,67 @@
+import { FormationData } from 'types/formationData';
+import { PersonalInfoData } from 'types/personalInfoData';
 import './styles.css';
 
-const PersonalInfo = () => {
+type Props = {
+  informations: PersonalInfoData;
+  formations: FormationData[];
+};
+
+const PersonalInfo = ({ informations, formations }: Props) => {
+  const birthDate = new Date(informations.birthDate);
+
+  function formationDate(date: Date) {
+    const newDate = new Date(date);
+    return (
+      `${`0${newDate.getMonth()+1}`}-${newDate.getFullYear()}`
+    );
+  }
+
+  function durationFormation(dateStart: Date, dateEnd: Date) {
+    const start = new Date(dateStart);
+    const end = new Date(dateEnd);
+    return (end.getFullYear()-start.getFullYear());
+  }
+  
   return (
     <div className="resume-info-container">
-      <h2 className="mb-3">David Moraes de Oliveira</h2>
+      <h2 className="mb-3">{informations?.name}</h2>
       <div className="resume-personal-info-container">
         <div className="resume-info-content">
           <h4>
-            Nascimento: <span>20/06/1997</span>
+            Nascimento:{' '}
+            <span>{birthDate.toLocaleDateString().replaceAll('/', '-')}</span>
           </h4>
           <h4>
-            Idade: <span>25 anos</span>
+            Idade:{' '}
+            <span>
+              {new Date(Date.now()).getFullYear() - birthDate.getFullYear()}{' '}
+              anos
+            </span>
           </h4>
           <h4>
-            Sexo: <span>Masculino</span>
+            Sexo: <span>{informations?.genre}</span>
           </h4>
           <h4>
-            Fone: <span>(44) 99158-5419</span>
+            Fone: <span>{informations?.phone}</span>
           </h4>
           <h4>
-            Email: <span>DavidMoraes-DEV@outlook.com</span>
+            Email: <span>{informations?.email}</span>
           </h4>
         </div>
         <div className="resume-info-content">
-          
           <h4>
-            Estado Civil: <span>Solteiro</span>
+            Endereço: <span>{informations?.address}</span>
           </h4>
           <h4>
-            Endereço: <span>Rua Lucio Tozini, nº 11</span>
+            CEP: <span>{informations?.cep}</span>
           </h4>
           <h4>
-            CEP: <span>86610-000 - Jaguapitã - PR</span>
+            Cidade/Estado:{' '}
+            <span>{`${informations?.city} - ${informations?.state}`}</span>
           </h4>
           <h4>
-            CNH Categoria(s): <span>AB</span>
+            CNH Categoria(s): <span>{informations?.cnh}</span>
           </h4>
           <h4>
             Trabalhando atualmente? <span>Não</span>
@@ -43,31 +70,34 @@ const PersonalInfo = () => {
       </div>
       <div className="resume-info-content">
         <h3>Formação:</h3>
-        <h4>
-          Instituição:{' '}
-          <span>UNIFAMMA - Faculdade Metropolitana de Maringá</span>
-        </h4>
-        <span className="resume-info-course-container">
-          <h4>
-            Curso: <span>Engenharia de Software</span>
-          </h4>
-          <span className='resume-info-course-duration-container'>
+        {formations.map((formation) => (
+          <span key={formation.id}>
             <h4>
-              Inicio: <span>02/2019</span>
+              Instituição:<span>{` ${formation.institution}`}</span>
             </h4>
-            <h4>
-              Término: <span>06/2023</span>
-            </h4>
+            <span className="resume-info-course-container">
+              <h4>
+                Curso:<span>{` ${formation.name}`}</span>
+              </h4>
+              <span className="resume-info-course-duration-container">
+                <h4>
+                  Inicio:<span>{` ${formationDate(formation.start)}`}</span>
+                </h4>
+                <h4>
+                  Término: <span>{` ${formationDate(formation.end)}`}</span>
+                </h4>
+              </span>
+            </span>
+            <span className="resume-info-course-situation-container">
+              <h4>
+                Situação: <span>{` ${formation.status}`}</span>
+              </h4>
+              <h4>
+                Duração: <span>{`${durationFormation(formation.start, formation.end)} Anos`}</span>
+              </h4>
+            </span>
           </span>
-        </span>
-        <span className='resume-info-course-situation-container'>
-        <h4>
-          Situação: <span>Cursando</span>
-        </h4>
-        <h4>
-          Duração: <span>4 Anos</span>
-        </h4>
-        </span>
+        ))}
       </div>
     </div>
   );
