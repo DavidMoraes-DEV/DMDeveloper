@@ -1,7 +1,7 @@
 package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 
 import com.dmdeveloper.portfolio.entities.Formation;
 
@@ -11,8 +11,8 @@ public class FormationDTO implements Serializable {
 	private Long id;
 	private String name;
 	private String institution;
-	private Date start;
-	private Date end;
+	private Instant start;
+	private Instant end;
 	private String status;
 	
 	public FormationDTO () {
@@ -27,7 +27,7 @@ public class FormationDTO implements Serializable {
 		status = entity.getStatus();
 	}
 
-	public FormationDTO(Long id, String name, String institution, Date start, Date end, String status) {
+	public FormationDTO(Long id, String name, String institution, Instant start, Instant end, String status) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
@@ -60,19 +60,19 @@ public class FormationDTO implements Serializable {
 		this.institution = institution;
 	}
 
-	public Date getStart() {
+	public Instant getStart() {
 		return start;
 	}
 
-	public void setStart(Date start) {
+	public void setStart(Instant start) {
 		this.start = start;
 	}
 
-	public Date getEnd() {
+	public Instant getEnd() {
 		return end;
 	}
 
-	public void setEnd(Date end) {
+	public void setEnd(Instant end) {
 		this.end = end;
 	}
 

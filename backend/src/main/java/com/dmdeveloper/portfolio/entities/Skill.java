@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +27,10 @@ public class Skill implements Serializable {
 	private String name;
 	private String imgUrl;
 	
+	@ManyToOne
+	@JoinColumn(name = "resume_id")
+	private Resume resume;
+	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_skill_category",
 			joinColumns = @JoinColumn(name = "skill_id"),
@@ -35,10 +40,11 @@ public class Skill implements Serializable {
 	public Skill () {
 	}
 
-	public Skill(Long id, String name, String imgUrl) {
+	public Skill(Long id, String name, String imgUrl, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.imgUrl = imgUrl;
+		this.resume = resume;
 	}
 
 	public Long getId() {
@@ -63,6 +69,14 @@ public class Skill implements Serializable {
 
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
+	}
+
+	public Resume getResume() {
+		return resume;
+	}
+
+	public void setResume(Resume resume) {
+		this.resume = resume;
 	}
 
 	public Set<Category> getCategories() {

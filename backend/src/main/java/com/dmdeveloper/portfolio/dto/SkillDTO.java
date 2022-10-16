@@ -59,7 +59,7 @@ public class SkillDTO implements Serializable {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-
+	
 	public Set<CategoryDTO> getCategories() {
 		return categories;
 	}

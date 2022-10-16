@@ -6,7 +6,6 @@ import java.util.Set;
 
 import com.dmdeveloper.portfolio.entities.Course;
 import com.dmdeveloper.portfolio.entities.Formation;
-import com.dmdeveloper.portfolio.entities.PersonalInfo;
 import com.dmdeveloper.portfolio.entities.Resume;
 import com.dmdeveloper.portfolio.entities.Skill;
 
@@ -26,16 +25,14 @@ public class ResumeDTO implements Serializable {
 	public ResumeDTO () {
 	}
 
-	public ResumeDTO(Long id, String fileUrl, PersonalInfo personalInfo) {
+	public ResumeDTO(Long id, String fileUrl) {
 		this.id = id;
 		this.fileUrl = fileUrl;
-		this.personalInfo = new PersonalInfoDTO(personalInfo);
 	}
 	
 	public ResumeDTO(Resume entity) {
 		id = entity.getId();
 		fileUrl = entity.getFileUrl();
-		personalInfo = new PersonalInfoDTO(entity.getPersonalInfo());
 	}
 
 	public ResumeDTO(Resume entity, Set<Formation> formations, Set<Course> courses, Set<Skill> skills) {
@@ -65,7 +62,7 @@ public class ResumeDTO implements Serializable {
 		return personalInfo;
 	}
 
-	public void setInformationDTO(PersonalInfoDTO personalInfo) {
+	public void setPersonalInfoDTO(PersonalInfoDTO personalInfo) {
 		this.personalInfo = personalInfo;
 	}
 

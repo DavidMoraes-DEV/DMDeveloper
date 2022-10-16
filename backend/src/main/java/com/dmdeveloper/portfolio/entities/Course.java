@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,15 +24,20 @@ public class Course implements Serializable {
 	private Double duration;
 	private String certificate;
 	
+	@ManyToOne
+	@JoinColumn(name = "resume_id")
+	private Resume resume;
+	
 	public Course() {
 	}
 
-	public Course(Long id, String name, String institution, Double duration, String certificate) {
+	public Course(Long id, String name, String institution, Double duration, String certificate, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
 		this.duration = duration;
 		this.certificate = certificate;
+		this.resume = resume;
 	}
 
 	public Long getId() {
@@ -71,6 +78,14 @@ public class Course implements Serializable {
 
 	public void setCertificate(String certificate) {
 		this.certificate = certificate;
+	}
+
+	public Resume getResume() {
+		return resume;
+	}
+
+	public void setResume(Resume resume) {
+		this.resume = resume;
 	}
 
 	@Override

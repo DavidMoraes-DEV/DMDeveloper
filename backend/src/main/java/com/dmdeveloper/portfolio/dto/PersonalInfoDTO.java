@@ -1,16 +1,17 @@
 package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 
 import com.dmdeveloper.portfolio.entities.PersonalInfo;
+import com.dmdeveloper.portfolio.entities.Resume;
 
 public class PersonalInfoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String name;
-	private Date birthDate;
+	private Instant birthDate;
 	private String genre;
 	private String phone;
 	private String email;
@@ -19,6 +20,7 @@ public class PersonalInfoDTO implements Serializable {
 	private String city;
 	private String state;
 	private String cnh;
+	private Resume resume;
 	
 	public PersonalInfoDTO () {
 	}
@@ -35,11 +37,12 @@ public class PersonalInfoDTO implements Serializable {
 		city = entity.getCity();
 		state = entity.getState();
 		cnh = entity.getCnh();
+		resume = entity.getResume();
 	}
 
 	
-	public PersonalInfoDTO (Long id, String name, Date birthDate, String genre, String phone, String email,
-			String address, String cep, String city, String state, String cnh) {
+	public PersonalInfoDTO (Long id, String name, Instant birthDate, String genre, String phone, String email,
+			String address, String cep, String city, String state, String cnh, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
@@ -51,6 +54,7 @@ public class PersonalInfoDTO implements Serializable {
 		this.city = city;
 		this.state = state;
 		this.cnh = cnh;
+		this.resume = resume;
 	}
 
 	public Long getId() {
@@ -69,11 +73,11 @@ public class PersonalInfoDTO implements Serializable {
 		this.name = name;
 	}
 
-	public Date getBirthDate() {
+	public Instant getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(Instant birthDate) {
 		this.birthDate = birthDate;
 	}
 
@@ -139,6 +143,14 @@ public class PersonalInfoDTO implements Serializable {
 
 	public void setCnh(String cnh) {
 		this.cnh = cnh;
+	}
+
+	public Resume getResume() {
+		return resume;
+	}
+
+	public void setResume(Resume resume) {
+		this.resume = resume;
 	}
 	
 }

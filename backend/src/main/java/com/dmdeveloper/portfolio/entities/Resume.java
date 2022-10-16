@@ -10,10 +10,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "tb_resume")
@@ -25,29 +26,25 @@ public class Resume implements Serializable {
 	private Long id;
 	private String fileUrl;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "personal_info_id", referencedColumnName = "id")
+	@OneToOne(mappedBy = "resume", cascade = CascadeType.ALL)
 	private PersonalInfo personalInfo;
 	
-	@OneToMany
-	@JoinColumn(name = "resume_id")
+	@OneToMany(mappedBy = "resume")
 	private Set<Formation> formations = new HashSet<>();
 	
-	@OneToMany
-	@JoinColumn(name = "resume_id")
+	@OneToMany(mappedBy = "resume")
 	private Set<Course> courses = new HashSet<>();
 	
-	@OneToMany
-	@JoinColumn(name = "resume_id")
+	@JsonIgnore
+	@OneToMany(mappedBy = "resume")
 	private Set<Skill> skills = new HashSet<>();
 	
 	public Resume () {
 	}
 
-	public Resume(Long id, String fileUrl, PersonalInfo personalInfo) {
+	public Resume(Long id, String fileUrl) {
 		this.id = id;
 		this.fileUrl = fileUrl;
-		this.personalInfo = personalInfo;
 	}
 
 	public Long getId() {
@@ -66,7 +63,7 @@ public class Resume implements Serializable {
 		this.fileUrl = fileUrl;
 	}
 	
-	public PersonalInfo getPersonalInfo() {
+	public PersonalInfo getPersonaliInfo() {
 		return personalInfo;
 	}
 

@@ -1,15 +1,18 @@
 package com.dmdeveloper.portfolio.entities;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 import java.util.Objects;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table( name = "tb_formation")
@@ -23,22 +26,27 @@ public class Formation implements Serializable {
 	private String institution;
 	private String status;
 	
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Date start;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	private Instant start;
 	
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Date end;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	private Instant end;
+	
+	@ManyToOne
+	@JoinColumn(name = "resume_id")
+	private Resume resume;
 	
 	public Formation () {
 	}
 
-	public Formation(Long id, String name, String institution, Date start, Date end, String status) {
+	public Formation(Long id, String name, String institution, Instant start, Instant end, String status, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
 		this.start = start;
 		this.end = end;
 		this.status = status;
+		this.resume = resume;
 	}
 
 	public Long getId() {
@@ -65,19 +73,19 @@ public class Formation implements Serializable {
 		this.institution = institution;
 	}
 
-	public Date getStart() {
+	public Instant getStart() {
 		return start;
 	}
 
-	public void setStart(Date start) {
+	public void setStart(Instant start) {
 		this.start = start;
 	}
 
-	public Date getEnd() {
+	public Instant getEnd() {
 		return end;
 	}
 
-	public void setEnd(Date end) {
+	public void setEnd(Instant end) {
 		this.end = end;
 	}
 
@@ -87,6 +95,14 @@ public class Formation implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Resume getResume() {
+		return resume;
+	}
+
+	public void setResume(Resume resume) {
+		this.resume = resume;
 	}
 
 	@Override

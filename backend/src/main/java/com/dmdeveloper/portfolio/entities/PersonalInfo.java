@@ -1,16 +1,18 @@
 package com.dmdeveloper.portfolio.entities;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Instant;
 import java.util.Objects;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "tb_personal_info")
@@ -30,16 +32,17 @@ public class PersonalInfo implements Serializable {
 	private String state;
 	private String cnh;
 	
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Date birthDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+	private Instant birthDate;
 	
-	@OneToOne(mappedBy = "personalInfo")
+	@OneToOne
+	@MapsId
 	private Resume resume;
 	
 	public PersonalInfo () {
 	}
 
-	public PersonalInfo(Long id, String name, Date birthDate, String genre, String phone, String email,
+	public PersonalInfo(Long id, String name, Instant birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh, Resume resume) {
 		this.id = id;
 		this.name = name;
@@ -71,11 +74,11 @@ public class PersonalInfo implements Serializable {
 		this.name = name;
 	}
 
-	public Date getBirthDate() {
+	public Instant getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(Instant birthDate) {
 		this.birthDate = birthDate;
 	}
 
