@@ -75,6 +75,7 @@
     }
 
     .resume-courses-info-content {
+        flex: 1;
         margin-left: 25px;
     }
 

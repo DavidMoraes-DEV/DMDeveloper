@@ -30,9 +30,11 @@ const Resume = () => {
             <div className="base-card resume-card-container">
               <div className="resume-image-button-container">
                 <div className="resume-image-container"></div>
-                <button className="btn base-button resume-button-container">
-                  BAIXAR CURRÍCULO
-                </button>
+                <a href={resume.fileUrl} target="_blank" rel='noopener noreferrer'>
+                  <button className="btn base-button resume-button-container">
+                    BAIXAR CURRÍCULO
+                  </button>
+                </a>
               </div>
               {resumeItem && (
                 <PersonalInfo informations={resume.personalInfo} formations={resume.formations}/>

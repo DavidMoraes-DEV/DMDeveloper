@@ -1,11 +1,11 @@
-import './styles.css';
-import './styles-logos.css';
-import { SkillData } from 'types/skill';
+import { SkillData } from 'types/skillData';
 import { CategoryData } from 'types/categoryData';
 import Ides from './Ides';
 import Tools from './Tools';
 import Backend from './Backend';
 import Frontweb from './Frontweb';
+import './styles.css';
+import './styles-logos.css';
 
 type Props = {
   skills: SkillData[];

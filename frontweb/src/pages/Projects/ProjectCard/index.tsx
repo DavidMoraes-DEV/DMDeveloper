@@ -1,26 +1,34 @@
-import DMDeveloperImage from 'assets/images/projetcs/DM-Developer.png';
+import { ProjectData } from 'types/prejectData';
 import './styles.css';
 
-const ProjectCard = () => {
+type Props = {
+    project?: ProjectData
+}
+
+const ProjectCard = ( {project}: Props ) => {
     return (
         <div className='base-card project-card-container'>
             <div className='project-card-image-container'>
-                <img src={DMDeveloperImage} alt="DM Developer, Portfólio de David Moraes de Oliveira" />
+                <img src={project?.projectImage} alt={project?.name} />
             </div>
             <div className='project-card-info-container'>
                 <span className='project-card-info-title'>
-                    <h1>NOME DO PROJETO</h1>
+                    <h1>{project?.name}</h1>
                 </span>
                 <span className='project-card-info-content'>
                     <h4>Descrição: </h4>
-                    <p>Descrição do conceito do projeto e suas tecnologias utilizadas para desenvolve-lo.</p>
+                    <p>{project?.description}</p>
                     <span className='project-card-buttons-container'>
-                        <button className='base-button'>
-                            CÓDIGO GITHUB
-                        </button>
-                        <button className='base-button'>
-                            ABRIR PROJETO
-                        </button>
+                        <a href={project?.gitUrl} target="_blank" rel='noopener noreferrer'>
+                            <button className='base-button'>
+                                CÓDIGO GITHUB
+                            </button>
+                        </a>
+                        <a href={project?.projectUrl} target="_blank" rel='noopener noreferrer'>
+                            <button className='base-button'>
+                                ABRIR PROJETO
+                            </button>
+                        </a>
                     </span>
                 </span>
             </div>

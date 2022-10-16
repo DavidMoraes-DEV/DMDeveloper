@@ -9,9 +9,11 @@ const Courses = ( { course } : Props) => {
     return (
         <div className="col-lg-6 resume-courses-content">
           <div className="button-container">
+          <a href={course.certificate} target="_blank" rel='noopener noreferrer'>
             <button className="btn base-button resume-course-button-container">
               CERTIFICADO
             </button>
+          </a>
           </div>
           <div className="mb-2 resume-courses-info-content">
             <h4>
