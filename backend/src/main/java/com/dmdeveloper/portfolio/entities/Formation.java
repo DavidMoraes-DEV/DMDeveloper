@@ -27,10 +27,10 @@ public class Formation implements Serializable {
 	private String status;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
-	private Instant start;
+	private Instant initFormation;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
-	private Instant end;
+	private Instant endFormation;
 	
 	@ManyToOne
 	@JoinColumn(name = "resume_id")
@@ -39,12 +39,12 @@ public class Formation implements Serializable {
 	public Formation () {
 	}
 
-	public Formation(Long id, String name, String institution, Instant start, Instant end, String status, Resume resume) {
+	public Formation(Long id, String name, String institution, Instant initFormation, Instant endFormation, String status, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
-		this.start = start;
-		this.end = end;
+		this.initFormation = initFormation;
+		this.endFormation = endFormation;
 		this.status = status;
 		this.resume = resume;
 	}
@@ -73,20 +73,20 @@ public class Formation implements Serializable {
 		this.institution = institution;
 	}
 
-	public Instant getStart() {
-		return start;
+	public Instant getInitFormation() {
+		return initFormation;
 	}
 
-	public void setStart(Instant start) {
-		this.start = start;
+	public void setStart(Instant initFormation) {
+		this.initFormation = initFormation;
 	}
 
-	public Instant getEnd() {
-		return end;
+	public Instant getEndFormation() {
+		return endFormation;
 	}
 
-	public void setEnd(Instant end) {
-		this.end = end;
+	public void setEnd(Instant endFormation) {
+		this.endFormation = endFormation;
 	}
 
 	public String getStatus() {

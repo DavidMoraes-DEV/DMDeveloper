@@ -11,8 +11,8 @@ public class FormationDTO implements Serializable {
 	private Long id;
 	private String name;
 	private String institution;
-	private Instant start;
-	private Instant end;
+	private Instant initFormation;
+	private Instant endFormation;
 	private String status;
 	
 	public FormationDTO () {
@@ -22,17 +22,17 @@ public class FormationDTO implements Serializable {
 		id = entity.getId();
 		name = entity.getName();
 		institution = entity.getInstitution();
-		start = entity.getStart();
-		end = entity.getEnd();
+		initFormation = entity.getInitFormation();
+		endFormation = entity.getEndFormation();
 		status = entity.getStatus();
 	}
 
-	public FormationDTO(Long id, String name, String institution, Instant start, Instant end, String status) {
+	public FormationDTO(Long id, String name, String institution, Instant initFormation, Instant endFormation, String status) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
-		this.start = start;
-		this.end = end;
+		this.initFormation = initFormation;
+		this.endFormation = endFormation;
 		this.status = status;
 	}
 
@@ -60,20 +60,20 @@ public class FormationDTO implements Serializable {
 		this.institution = institution;
 	}
 
-	public Instant getStart() {
-		return start;
+	public Instant getInitFormation() {
+		return initFormation;
 	}
 
-	public void setStart(Instant start) {
-		this.start = start;
+	public void setStart(Instant initFormation) {
+		this.initFormation = initFormation;
 	}
 
-	public Instant getEnd() {
-		return end;
+	public Instant getEndFormation() {
+		return endFormation;
 	}
 
-	public void setEnd(Instant end) {
-		this.end = end;
+	public void setEnd(Instant endFormation) {
+		this.endFormation = endFormation;
 	}
 
 	public String getStatus() {
