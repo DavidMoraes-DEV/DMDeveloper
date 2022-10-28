@@ -1,4 +1,4 @@
-import { ProjectData } from 'types/prejectData';
+import { ProjectData } from 'types/projectData';
 import './styles.css';
 
 type Props = {
@@ -7,32 +7,30 @@ type Props = {
 
 const ProjectCard = ( {project}: Props ) => {
     return (
-        <div className='base-card project-card-container'>
-            <div className='project-card-image-container'>
+        <article className='base-card project-card-container'>
+            <figure className='project-card-image-container'>
                 <img src={project?.projectImage} alt={project?.name} />
-            </div>
-            <div className='project-card-info-container'>
-                <span className='project-card-info-title'>
-                    <h1>{project?.name}</h1>
-                </span>
-                <span className='project-card-info-content'>
+            </figure>
+            <section className='project-card-info-container'>
+                <h1>{project?.name}</h1>
+                <div className='project-card-info-content'>
                     <h4>Descrição: </h4>
                     <p>{project?.description}</p>
-                    <span className='project-card-buttons-container'>
-                        <a href={project?.gitUrl} target="_blank" rel='noopener noreferrer'>
-                            <button className='base-button'>
+                    <aside className='project-card-buttons-container'>
+                        <a href={project?.gitUrl} target="_blank" rel='noopener noreferrer' className='project-card-button'>
+                            <button className='btn base-button project-card-button-content'>
                                 CÓDIGO GITHUB
                             </button>
                         </a>
-                        <a href={project?.projectUrl} target="_blank" rel='noopener noreferrer'>
-                            <button className='base-button'>
+                        <a href={project?.projectUrl} target="_blank" rel='noopener noreferrer' className='project-card-button d-none'>
+                            <button className='btn base-button'>
                                 ABRIR PROJETO
                             </button>
                         </a>
-                    </span>
-                </span>
-            </div>
-        </div>
+                    </aside>
+                </div>
+            </section>
+        </article>
     );
 }
 

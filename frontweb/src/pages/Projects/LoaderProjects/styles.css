@@ -1,0 +1,28 @@
+.loader-projects-container {
+  max-width: 436px;
+}
+
+@media (min-width: 576px) {
+  .loader-projects-container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .loader-projects-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 992px) {
+  .loader-projects-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loader-projects-container {
+    max-width: 1150px;
+  }
+}

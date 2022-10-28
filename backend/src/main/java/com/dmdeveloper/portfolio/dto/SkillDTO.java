@@ -13,22 +13,25 @@ public class SkillDTO implements Serializable {
 	private Long id;
 	private String name;
 	private String imgUrl;
+	private Long resumeId;
 	
 	private Set<CategoryDTO> categories = new HashSet<>();
 	
 	public SkillDTO() {
 	}
 	
-	public SkillDTO(Long id, String name, String imgUrl) {
+	public SkillDTO(Long id, String name, String imgUrl, Long resumeId) {
 		this.id = id;
 		this.name = name;
 		this.imgUrl = imgUrl;
+		this.resumeId = resumeId;
 	}
 	
 	public SkillDTO(Skill entity) {
 		id = entity.getId();
 		name = entity.getName();
 		imgUrl = entity.getImgUrl();
+		resumeId = entity.getResume().getId();
 	}
 
 	public SkillDTO(Skill entity, Set<Category> categories) {
@@ -60,6 +63,14 @@ public class SkillDTO implements Serializable {
 		this.imgUrl = imgUrl;
 	}
 	
+	public Long getResumeId() {
+		return resumeId;
+	}
+
+	public void setResumeId(Long resumeId) {
+		this.resumeId = resumeId;
+	}
+
 	public Set<CategoryDTO> getCategories() {
 		return categories;
 	}

@@ -1,26 +1,15 @@
-h1 {
-    font-size: 18px;
-    color: #A0A0A0;
-    margin-bottom: 10px;
-}
-
 .resume-container {
     padding: 20px;
-    height: auto;
+    height: 100%;
+    min-height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
-}
-
-.resume-infos-container {
-    border: 1px solid white;
 }
 
 .resume-card-container {
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid yellow;
 }
 
 .resume-image-button-container {
@@ -28,7 +17,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border: 1px solid blue;
 }
 
 .resume-image-container {
@@ -36,8 +24,12 @@ h1 {
     height: 150px;
     margin-bottom: 15px;
     border-radius: 5px;
+    overflow: hidden;
     background-color: #464646;
-    border: 1px solid orange;
+}
+
+.resume-image-container img {
+    width: 100%;
 }
 
 .resume-button-container {
@@ -48,20 +40,32 @@ h1 {
 }
 
 .resume-courses-container {
-    padding: 20px 20px 10px 20px;
+    padding: 30px;
+    padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
 .resume-courses-container h1 {
-    font-size: 18px;
+    font-size: 17px;
     color: #A0A0A0;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+}
+
+.resume-courses-grid-container {
+    width: 100%;
+    margin: 0;
 }
 
 .skills-container {
     width: 100%;
-    padding: 20px 20px 3px 20px;
-    border: 1px solid yellow;
+    padding: 25px;
+    padding-bottom: 10px;
+}
+
+.skills-container h1 {
+    font-size: 17px;
+    color: #A0A0A0;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 576px) {
@@ -94,16 +98,15 @@ h1 {
 
     .resume-courses-container {
         font-size: 18px;
-        padding: 30px 30px 6px 30px;
+        padding: 40px 40px 10px 40px;
     }
 
     .resume-courses-container h1 {
         font-size: 25px;
-        margin-bottom: 15px;
     }
 
     .skills-container {
-        padding: 30px 30px 10px 30px;
+        padding: 40px 40px 20px 40px;
     }
 
     .skills-container h1 {
@@ -155,8 +158,23 @@ h1 {
         margin-bottom: 30px;
     }
 
+    .resume-courses-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume-courses-container h1 {
+        width: 100%;
+        max-width: 810px;
+    }
+
+    .resume-courses-grid-container {
+        max-width: 810px;
+    }
+
     .skills-container {
-        padding-bottom: 0;
+        padding-bottom: 10px;
     }
 }
 
@@ -174,10 +192,21 @@ h1 {
     }
 
     .resume-courses-container {
-        padding: 30px 60px 10px 60px;
+        padding: 40px 60px 40px 60px;
+    }
+
+    .resume-courses-container h1 {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 15px;
+    }
+
+    .resume-courses-grid-container {
+        max-width: none;
+        border-top: 2px dashed #424242;
     }
 
     .skills-container {
-        padding: 30px 60px 0 60px;
+        padding: 30px 60px;
     }
 }

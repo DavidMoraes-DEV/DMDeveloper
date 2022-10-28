@@ -1,0 +1,81 @@
+.loader-course-container-content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px 0 0;
+    margin-bottom: 10px;
+    border-top: 2px solid #1F1F1F;
+}
+
+.loader-course-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media (min-width: 576px) {
+    .loader-course-container-content {
+        padding-top: 30px;
+        margin-bottom: 30px;
+        border-top: 4px solid #1F1F1F;
+    }
+
+    .loader-course-button {
+        width: 180px;
+    }
+
+    .loader-course-button rect.course-button {
+        width: 180px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .loader-course-container-content {
+        flex-direction: row;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .loader-course-info-container {
+        flex: 1;
+        margin-left: 25px;
+    }
+
+    .loader-course-content {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .loader-course-container-content {
+        padding: 8px 10px 0;
+        max-width: 810px;
+    }
+
+    .loader-course-info-container {
+        min-width: 500px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .loader-course-container-content {
+        flex: 1;
+        margin-bottom: 5px;
+        border: none;
+    }
+
+    .loader-course-button {
+        width: 118px;
+    }
+
+    .loader-course-button rect.course-button {
+        width: 118px;
+        height: 40px;
+    }
+
+    .loader-course-info-container {
+        min-width: 220px;
+    }
+}

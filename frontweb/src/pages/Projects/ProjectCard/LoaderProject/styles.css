@@ -1,0 +1,168 @@
+.loader-project-content {
+  margin-bottom: 20px;
+}
+
+.loader-project-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.loader-project-description-tittle {
+  margin-bottom: 5px;
+}
+
+.loader-project-info-content {
+  padding: 15px;
+}
+
+.loader-project-description {
+  margin-bottom: 20px;
+}
+
+.loader-project-info-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.loader-project-info-button-1 {
+  width: 110px;
+}
+
+.loader-project-info-button-1 rect {
+  width: 110px;
+}
+
+.loader-project-info-button-2 {
+  width: 110px;
+}
+
+.loader-project-info-button-2 rect {
+  width: 110px;
+}
+
+@media (min-width: 576px) {
+  .loader-project-content {
+    margin-bottom: 25px;
+  }
+
+  .loader-project-info-content {
+    padding: 20px;
+  }
+
+  .loader-project-info-button-1 {
+    width: 100px;
+  }
+
+  .loader-project-info-button-1 rect {
+    width: 100px;
+  }
+
+  .loader-project-info-button-2 {
+    width: 100px;
+  }
+
+  .loader-project-info-button-2 rect {
+    width: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .loader-project-container {
+    max-width: 390px;
+  }
+
+  .loader-project-content {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .loader-project-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .loader-project-content {
+    display: flex;
+  }
+
+  .loader-project-image-container {
+    width: 360px;
+    height: 240px;
+  }
+
+  .loader-project-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .loader-project-image rect.project-image {
+    width: 360px;
+    height: 100%;
+  }
+
+  .loader-project-info-container {
+    flex: 1;
+  }
+
+  .loader-project-info-tittle {
+    height: 40px;
+  }
+
+  .loader-project-tittle {
+    height: 40px;
+    border-radius: 0 10px 0 0;
+  }
+
+  .loader-project-description-tittle {
+    height: 20px;
+  }
+
+  .loader-project-description-tittle rect.project-description-tittle {
+    height: 20px;
+  }
+
+  .loader-project-info-button-1 {
+    width: 180px;
+    height: 35px;
+  }
+
+  .loader-project-info-button-1 rect {
+    width: 180px;
+    height: 35px;
+  }
+
+  .loader-project-info-button-2 {
+    width: 180px;
+    height: 35px;
+  }
+
+  .loader-project-info-button-2 rect {
+    width: 180px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loader-project-image-container {
+    width: 450px;
+    height: 275px;
+  }
+
+  .loader-project-image rect.project-image {
+    width: 450px;
+  }
+
+  .loader-project-info-content {
+    padding: 25px;
+  }
+
+  .loader-project-description {
+    height: 104px;
+  }
+
+  .loader-project-description rect.project-description {
+    height: 100%;
+  }
+}

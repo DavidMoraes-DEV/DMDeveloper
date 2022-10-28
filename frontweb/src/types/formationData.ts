@@ -2,7 +2,7 @@ export type FormationData = {
     id: number,
     name: string,
     institution: string,
-    start: Date,
-    end: Date,
+    initFormation: Date,
+    endFormation: Date,
     status: string
 }

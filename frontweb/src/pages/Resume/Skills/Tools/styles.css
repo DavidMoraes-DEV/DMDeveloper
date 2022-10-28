@@ -1,70 +1,39 @@
+.skills-tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-tools-container h2 {
+    width: 100%;
+    padding: 7px 10px;
+    background-color: #494949;
+    color: #fff;
+    font-size: 15px;
+}
+
 .skills-tools-logos-container {
-    padding: 20px;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 10px 0 10px;
     align-items: center;
     margin-bottom: 20px;
     background-color: #C7C6C6;
 }
 
-.skills-tools-logos-db img {
-    width: 85px;
-    margin-bottom: 10px;
-    border: 1px solid blue;
-}
-
-.skills-tools-logos-db {
-    display: flex;
-    justify-content: space-around;
-}
-
-.logo-postman {
-    display: none;
-}
-
-.skills-tools-postman {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid blue;
-}
-
-.skills-tools-postman img {
-    width: 150px;
-}
-
 @media (min-width: 576px) {
-    .skills-tools-logos-db {
-        width: 100%;
-        justify-content: space-evenly;
-        border: 1px solid red;
-    }
 
-    .skills-tools-logos-db img {
-        margin: 0;
-    }
-
-    .logo-postman {
-        width: 160px;
-        display: flex;
-        align-items: center;
-        border: 1px solid black;
-    }
-
-    .logo-postman img {
-        width: 100%;
-    }
-
-    .skills-tools-postman {
-        display: none;
+    .skills-tools-container h2 {
+        padding: 10px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 992px) {
-    .logo-postman {
-        width: 200px;
-    }
-
     .skills-tools-logos-container {
-        padding: 30px;
+        padding: 20px;
+        padding-bottom: 5px;
+        margin: 0;
         margin-bottom: 30px;
     }
 }

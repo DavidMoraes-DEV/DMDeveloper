@@ -1,5 +1,5 @@
-import { SkillData } from 'types/skillData';
 import { CategoryData } from 'types/categoryData';
+import { SkillData } from 'types/skillData';
 import Ides from './Ides';
 import Tools from './Tools';
 import Backend from './Backend';
@@ -27,8 +27,6 @@ const Skills = ( { skills } : Props) => {
     return (categoriesAll);
   }
 
-  categorySkill(skills.map(skill => skill.categories[0]));
-
   function filterSkillsCategory(skills: SkillData[], categoryId: Number) {
 
     const skillsCategory =
@@ -52,8 +50,6 @@ const Skills = ( { skills } : Props) => {
 
     return (skillsCategory);
   }
-
-  filterSkillsCategory(skills, 4);
 
   return (
     <div className="skills-container-content">

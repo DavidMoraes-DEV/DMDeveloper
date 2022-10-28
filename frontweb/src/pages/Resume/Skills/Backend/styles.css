@@ -3,12 +3,39 @@
     background-color: #C7C6C6;
 }
 
-.skills-backend-logo img {
-    border: 1px solid blue;
+.skills-backend-container h2 {
+    width: 100%;
+    padding: 7px 10px;
+    background-color: #494949;
+    color: #fff;
+    font-size: 15px;
+}
+
+.skills-backend-logos-container {
+    width: 100%;
+    padding: 15px 10px 0 10px;
+    margin: 0;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+
+    .skills-backend-container h2 {
+        padding: 10px;
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 768px) {
     .skills-backend-logos-container {
         padding: 20px 20px 5px 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills-backend-logos-container {
+        padding: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
     }
 }

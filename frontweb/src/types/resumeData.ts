@@ -6,7 +6,7 @@ import { SkillData } from "./skillData"
 export type ResumeData = {
     id: number,
     fileUrl: string,
-    personalInfo: PersonalInfoData,
+    personalInfos: PersonalInfoData[],
     formations: FormationData[],
     courses: CourseData[],
     skills: SkillData[]

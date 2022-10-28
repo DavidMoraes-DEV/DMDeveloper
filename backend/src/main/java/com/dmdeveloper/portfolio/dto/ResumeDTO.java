@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.dmdeveloper.portfolio.entities.Course;
 import com.dmdeveloper.portfolio.entities.Formation;
+import com.dmdeveloper.portfolio.entities.PersonalInfo;
 import com.dmdeveloper.portfolio.entities.Resume;
 import com.dmdeveloper.portfolio.entities.Skill;
 
@@ -14,7 +15,8 @@ public class ResumeDTO implements Serializable {
 	
 	private Long id;
 	private String fileUrl;
-	private PersonalInfoDTO personalInfo;
+
+	private Set<PersonalInfoDTO> personalInfos = new HashSet<>();
 	
 	private Set<FormationDTO> formations = new HashSet<>();
 	
@@ -35,8 +37,9 @@ public class ResumeDTO implements Serializable {
 		fileUrl = entity.getFileUrl();
 	}
 
-	public ResumeDTO(Resume entity, Set<Formation> formations, Set<Course> courses, Set<Skill> skills) {
+	public ResumeDTO(Resume entity, Set<PersonalInfo> personalInfos, Set<Formation> formations, Set<Course> courses, Set<Skill> skills) {
 		this(entity);
+		personalInfos.forEach(personalInfo -> this.personalInfos.add(new PersonalInfoDTO(personalInfo)));
 		formations.forEach(formation -> this.formations.add(new FormationDTO(formation)));
 		courses.forEach(course -> this.courses.add(new CourseDTO(course)));
 		skills.forEach(tec -> this.skills.add(new SkillDTO(tec, tec.getCategories())));
@@ -58,14 +61,10 @@ public class ResumeDTO implements Serializable {
 		this.fileUrl = fileUrl;
 	}
 
-	public PersonalInfoDTO getPersonalInfo() {
-		return personalInfo;
+	public Set<PersonalInfoDTO> getPersonalInfos() {
+		return personalInfos;
 	}
-
-	public void setPersonalInfoDTO(PersonalInfoDTO personalInfo) {
-		this.personalInfo = personalInfo;
-	}
-
+	
 	public Set<FormationDTO> getFormations() {
 		return formations;
 	}

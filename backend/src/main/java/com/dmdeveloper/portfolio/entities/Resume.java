@@ -5,13 +5,11 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -26,8 +24,9 @@ public class Resume implements Serializable {
 	private Long id;
 	private String fileUrl;
 
-	@OneToOne(mappedBy = "resume", cascade = CascadeType.ALL)
-	private PersonalInfo personalInfo;
+	
+	@OneToMany(mappedBy = "resume")
+	private Set<PersonalInfo> personalInfos = new HashSet<>();
 	
 	@OneToMany(mappedBy = "resume")
 	private Set<Formation> formations = new HashSet<>();
@@ -62,13 +61,9 @@ public class Resume implements Serializable {
 	public void setFileUrl(String fileUrl) {
 		this.fileUrl = fileUrl;
 	}
-	
-	public PersonalInfo getPersonaliInfo() {
-		return personalInfo;
-	}
 
-	public void setPersonalInfo(PersonalInfo personalInfo) {
-		this.personalInfo = personalInfo;
+	public Set<PersonalInfo> getPersonalInfos() {
+		return personalInfos;
 	}
 
 	public Set<Formation> getFormations() {

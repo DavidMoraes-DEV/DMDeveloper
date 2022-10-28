@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import com.dmdeveloper.portfolio.entities.PersonalInfo;
-import com.dmdeveloper.portfolio.entities.Resume;
 
 public class PersonalInfoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -20,7 +19,7 @@ public class PersonalInfoDTO implements Serializable {
 	private String city;
 	private String state;
 	private String cnh;
-	private Resume resume;
+	private Long resumeId;
 	
 	public PersonalInfoDTO () {
 	}
@@ -37,12 +36,12 @@ public class PersonalInfoDTO implements Serializable {
 		city = entity.getCity();
 		state = entity.getState();
 		cnh = entity.getCnh();
-		resume = entity.getResume();
+		resumeId = entity.getResume().getId();
 	}
 
 	
 	public PersonalInfoDTO (Long id, String name, Instant birthDate, String genre, String phone, String email,
-			String address, String cep, String city, String state, String cnh, Resume resume) {
+			String address, String cep, String city, String state, String cnh, Long resumeId) {
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
@@ -54,7 +53,7 @@ public class PersonalInfoDTO implements Serializable {
 		this.city = city;
 		this.state = state;
 		this.cnh = cnh;
-		this.resume = resume;
+		this.resumeId = resumeId;
 	}
 
 	public Long getId() {
@@ -145,12 +144,12 @@ public class PersonalInfoDTO implements Serializable {
 		this.cnh = cnh;
 	}
 
-	public Resume getResume() {
-		return resume;
+	public Long getResumeId() {
+		return resumeId;
 	}
 
-	public void setResume(Resume resume) {
-		this.resume = resume;
+	public void setResumeId(Long resumeId) {
+		this.resumeId = resumeId;
 	}
 	
 }

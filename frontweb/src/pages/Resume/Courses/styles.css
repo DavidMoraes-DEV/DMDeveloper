@@ -1,102 +1,139 @@
 .resume-courses-content {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 10px;
-    border: 1px solid purple;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  border-top: 2px solid #424242;
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    border: 1px solid peru;
+  display: flex;
+  justify-content: center
 }
 
 .resume-course-button-container {
-    width: 135px;
-    height: 30px;
-    font-size: 11px;
-    color: #fff;
+  width: 135px;
+  height: 30px;
+  font-size: 11px;
+  color: #fff;
 }
 
 .resume-course-button-container button:hover {
-    background-color: #183e80;
-}
-
-.resume-courses-info-content {
-    border: 1px solid green;
+  background-color: #183e80;
 }
 
 .resume-courses-info-content h3 {
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 7px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 7px;
 }
 
 .resume-courses-info-content h4 {
-    margin-bottom: 4px;
-    font-size: 12px;
-    color: #A0A0A0;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #a0a0a0;
 }
 
 .resume-courses-info-content span {
-    font-weight: normal;
-    color: white;
+  font-weight: normal;
+  color: white;
 }
 
 @media (min-width: 576px) {
-    .resume-courses-content {
-        margin-bottom: 20px;
-    }
+  .resume-courses-content {
+    margin-bottom: 30px;
+    border-top: 3px solid #424242;
+  }
 
-    .resume-course-button-container {
-        width: 180px;
-        height: 40px;
-        font-size: 15px;
-    }
+  .resume-course-button-container {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
 
-    .button-container {
-        margin-top: 5px;
-    }
+  .button-container {
+    margin-top: 5px;
+  }
 
-    .resume-courses-info-content h3 {
-        font-size: 25px;
-    }
+  .resume-courses-info-content h3 {
+    font-size: 25px;
+  }
 
-    .resume-courses-info-content h4 {
-        font-size: 15px;
-    }
+  .resume-courses-info-content h4 {
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 768px) {
-    .resume-courses-content {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+  .resume-courses-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 22px;
+    margin-bottom: 15px;
+  }
 
-    .resume-courses-info-content {
-        flex: 1;
-        margin-left: 25px;
-    }
+  .resume-courses-info-content {
+    margin-left: 25px;
+    margin-bottom: 0;
+    flex: 1;
+  }
 
-    .button-container {
-        margin: 0;
-        margin-bottom: 8px;
-    }
+  .button-container {
+    margin: 0;
+    margin-bottom: 8px;
+  }
 }
 
 @media (min-width: 992px) {
-    .resume-courses-content {
-        justify-content: space-evenly;
-    }
+  .resume-courses-content {
+    max-width: 840px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-    .resume-course-button-container {
-        width: 120px;
-    }
+  .resume-course-button-container {
+    width: 180px;
+  }
+
+  .resume-courses-info-content {
+    margin-left: 40px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .resume-courses-content {
-        margin-bottom: 15px;
-    }
+  .resume-courses-content {
+    margin-bottom: 15px;
+    max-width: none;
+    margin-bottom: 0;
+    padding: 25px 0 17px 0;
+    border-top: none;
+  }
+    
+  .resume-course-button-container {
+    width: 118px;
+  }
+
+  .resume-courses-info-content {
+    margin: 0 20px;
+  }
+
+  .course-grid-odd {
+    border-right: 2px dashed #424242;
+    border-bottom: 2px dashed #424242;
+  }
+
+  .course-grid-pair {
+    border-bottom: 2px dashed #424242;
+  }
+
+  .course-grid-pair button {
+    margin-left: 20px;
+  }
+
+  .course-grid-pair div {
+    margin-right: 0;
+  }
+
 }

@@ -18,6 +18,7 @@ import com.dmdeveloper.portfolio.entities.Skill;
 import com.dmdeveloper.portfolio.repositories.CategoryRepository;
 import com.dmdeveloper.portfolio.repositories.CourseRepository;
 import com.dmdeveloper.portfolio.repositories.FormationRepository;
+import com.dmdeveloper.portfolio.repositories.PersonalInfoRepository;
 import com.dmdeveloper.portfolio.repositories.ProjectRepository;
 import com.dmdeveloper.portfolio.repositories.ResumeRepository;
 import com.dmdeveloper.portfolio.repositories.SkillRepository;
@@ -28,6 +29,9 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Autowired
 	private ResumeRepository resumeRepository;
+	
+	@Autowired
+	private PersonalInfoRepository personalInfoRepository;
 	
 	@Autowired
 	private CategoryRepository categoryRepository;
@@ -51,9 +55,7 @@ public class TestConfig implements CommandLineRunner {
 		resumeRepository.saveAll(Arrays.asList(resume));
 		
 		PersonalInfo personalinfo = new PersonalInfo(null, "David Moraes de Oliveira", Instant.parse("1997-06-20T15:15:00Z"), "Masculino", "44 99158-5419", "DavidMoraes-DEV@outlook.com", "Rua Lucio Tozini, 11", "86610-000", "Jaguapitã", "PR", "AB", resume);
-		
-		resume.setPersonalInfo(personalinfo);
-		resumeRepository.save(resume);
+		personalInfoRepository.saveAll(Arrays.asList(personalinfo));
 		
 		Category catg1 = new Category(null, "IDES");
 		Category catg2 = new Category(null, "Tools");

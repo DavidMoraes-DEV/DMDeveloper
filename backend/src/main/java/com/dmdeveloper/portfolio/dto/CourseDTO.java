@@ -12,6 +12,7 @@ public class CourseDTO implements Serializable {
 	private String institution;
 	private Double duration;
 	private String certificate;
+	private Long resumeId;
 	
 	public CourseDTO() {
 	}
@@ -22,14 +23,16 @@ public class CourseDTO implements Serializable {
 		institution = entity.getInstitution();
 		duration = entity.getDuration();
 		certificate = entity.getCertificate();
+		resumeId = entity.getResume().getId();
 	}
 	
-	public CourseDTO(Long id, String name, String institution, Double duration, String certificate) {
+	public CourseDTO(Long id, String name, String institution, Double duration, String certificate, Long resumeId) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
 		this.duration = duration;
 		this.certificate = certificate;
+		this.resumeId = resumeId;
 	}
 
 	public Long getId() {
@@ -70,6 +73,14 @@ public class CourseDTO implements Serializable {
 
 	public void setCertificate(String certificate) {
 		this.certificate = certificate;
+	}
+
+	public Long getResumeId() {
+		return resumeId;
+	}
+
+	public void setResumeId(Long resumeId) {
+		this.resumeId = resumeId;
 	}
 	
 }

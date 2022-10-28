@@ -3,13 +3,40 @@
     background-color: #C7C6C6;
 }
 
+.skills-frontweb-container h2 {
+    width: 100%;
+    padding: 7px 10px;
+    background-color: #494949;
+    color: #fff;
+    font-size: 15px;
+}
+
 .skills-frontweb-content {
     width: 100%;
-    border: 1px solid orange;
+}
+
+.skills-frontweb-logos-container {
+    width: 100%;
+    padding: 15px 10px 0 10px;
+    margin: 0;
+    justify-content: center;
 }
 
 @media (min-width: 576px) {
+    .skills-frontweb-container h2 {
+        padding: 10px;
+        font-size: 20px;
+    }
+
     .skills-frontweb-content {
         display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills-frontweb-logos-container {
+        padding: 30px;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
     }
 }

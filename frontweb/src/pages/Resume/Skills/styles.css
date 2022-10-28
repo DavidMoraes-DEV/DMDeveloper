@@ -1,42 +1,7 @@
-.skills-tittle-container {
-    padding: 7px 10px;
-    background-color: #494949;
-    color: #fff;
-}
-
-.skills-tittle-container h2 {
-    font-size: 15px;
-}
-
-.skills-logos-container {
-    width: 100%;
-    padding: 15px 10px 0 10px;
-    margin: 0;
-    border: 1px solid red;
-}
-
 .skills-logo {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    border: 1px solid green;
-}
-
-@media (min-width: 576px) {
-    .skills-tittle-container {
-        padding: 10px;
-    }
-
-    .skills-tittle-container h2 {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .skills-logos-container {
-        padding: 25px 15px 15px 15px;
-        margin-bottom: 30px;
-    }
 }

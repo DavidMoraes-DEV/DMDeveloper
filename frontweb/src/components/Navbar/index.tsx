@@ -1,12 +1,14 @@
 import MainImage from 'assets/images/logo-dmdeveloper.png';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import 'bootstrap/js/src/collapse.js';
 import './styles.css';
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <div className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
-      <div className="container-fluid">
+    <header className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
+      <section className="container-fluid">
         <Link to={'/'}>
           <img
             src={MainImage}
@@ -16,7 +18,9 @@ const Navbar = () => {
         </Link>
 
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${
+            location.pathname === '/' ? 'd-none' : ''
+          }`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#dmdeveloper-navbar"
@@ -27,25 +31,25 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
+        <nav
           className="collapse navbar-collapse navbar-container"
           id="dmdeveloper-navbar"
         >
-          <ul className="navbar-nav offset-md-2 main-menu">
-            <NavLink to="/projects" exact className='main-menu-link'>
+          <ul
+            className={`navbar-nav offset-md-2 main-menu ${
+              location.pathname === '/' ? 'd-none' : ''
+            }`}
+          >
+            <NavLink to="/projects" exact className="main-menu-link">
               <li className="main-menu-item">PROJETOS</li>
             </NavLink>
-            <NavLink to="/resume" exact className='main-menu-link'>
+            <NavLink to="/resume" exact className="main-menu-link">
               <li className="main-menu-item">CURRÍCULO</li>
             </NavLink>
-
-            <NavLink to="/about" exact className='main-menu-link'>
-              <li className="main-menu-item">SOBRE MIM</li>
-            </NavLink>
           </ul>
-        </div>
-      </div>
-    </div>
+        </nav>
+      </section>
+    </header>
   );
 };
 

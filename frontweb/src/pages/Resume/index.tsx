@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import { ResumeData } from 'types/resumeData';
 import { requestBackend } from 'util/requests';
 import Courses from './Courses';
+import LoaderResume from './LoaderResume';
 import PersonalInfo from './PersonalInfo';
 import Skills from './Skills';
+import ImageProfile from '../../assets/images/image-profile.png';
 import './styles.css';
 
 const Resume = () => {
@@ -13,51 +15,72 @@ const Resume = () => {
     method: 'GET',
     url: '/resume',
   };
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    requestBackend(params).then((response) => {
-      console.log(response.data);
-      setResume(response.data);
-    });
+    setIsLoading(true);
+    requestBackend(params)
+      .then((response) => {
+        console.log(response.data);
+        setResume(response.data);
+      })
+      .finally(() => {
+        setTimeout(() => (setIsLoading(false)), 5000);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <>
-      {resumeItem && resumeItem.map((resume) => (
-        <div className="bg resume-container" key={resume.id}>
-          <span className="resume-infos-container">
-            <div className="base-card resume-card-container">
+    <main className="bg resume-container">
+      {isLoading ? (
+        <LoaderResume />
+      ) : (
+        resumeItem !== undefined &&
+        resumeItem.map((resume) => (
+          <div className="resume-infos-container" key={resume.id}>
+            <section className="base-card resume-card-container">
               <div className="resume-image-button-container">
-                <div className="resume-image-container"></div>
-                <a href={resume.fileUrl} target="_blank" rel='noopener noreferrer'>
+                <figure className="resume-image-container">
+                  <img src={ImageProfile} alt="" />
+                </figure>
+                <a
+                  href={resume.fileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="btn base-button resume-button-container">
                     BAIXAR CURRÍCULO
                   </button>
                 </a>
               </div>
-              {resumeItem && (
-                <PersonalInfo informations={resume.personalInfo} formations={resume.formations}/>
-              )}
-            </div>
+              {resume.personalInfos.map((personalInfo) => (
+                <PersonalInfo
+                  info={personalInfo}
+                  formations={resume.formations}
+                  key={personalInfo.id}
+                />
+              ))}
+            </section>
 
-            <div className="base-card resume-courses-container">
+            <section className="base-card resume-courses-container">
               <h1>CURSOS COMPLEMENTARES:</h1>
-              <div className="row">
-                {resume.courses.map(course => (
-                  <Courses course={course} key={course.id}/>
-                ))}
-                </div>
-            </div>
+              <div className="row resume-courses-grid-container">
+                {resume.courses
+                  .sort((courseA, courseB) => courseA.id - courseB.id)
+                  .map((course) => (
+                    <Courses course={course} key={course.id} />
+                  ))}
+              </div>
+            </section>
 
-            <div className="base-card skills-container">
-              <h1>CONHECIMENTOS:</h1>
-              <Skills skills={resume.skills}/>
-            </div>
-          </span>
-        </div>
-      ))}
-    </>
+            <section className="base-card skills-container">
+              <h1>CONHECIMENTOS BÁSICOS EM:</h1>
+              <Skills skills={resume.skills} />
+            </section>
+          </div>
+        ))
+      )}
+    </main>
   );
 };
 

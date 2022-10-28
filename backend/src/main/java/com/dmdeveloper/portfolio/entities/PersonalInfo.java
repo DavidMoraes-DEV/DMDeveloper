@@ -8,8 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -35,13 +35,13 @@ public class PersonalInfo implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant birthDate;
 	
-	@OneToOne
-	@MapsId
+	@ManyToOne
+	@JoinColumn(name = "resume_id")
 	private Resume resume;
 	
 	public PersonalInfo () {
 	}
-
+	
 	public PersonalInfo(Long id, String name, Instant birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh, Resume resume) {
 		this.id = id;
@@ -57,7 +57,7 @@ public class PersonalInfo implements Serializable {
 		this.cnh = cnh;
 		this.resume = resume;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}

@@ -1,19 +1,14 @@
 .resume-info-container {
     padding: 10px;
-    border: 1px solid white;
 }
 
 .resume-info-container h2 {
     font-size: 19px;
-    border-bottom: 2px solid #A0A0A0;
+    border-bottom: 2px solid #424242;
 }
 
 .resume-personal-info-container {
-    border: 1px solid purple;
-}
-
-.resume-info-content {
-    border: 1px solid green;
+    margin-bottom: 15px;
 }
 
 .resume-info-content h3 {
@@ -35,27 +30,23 @@
 
 .resume-info-course-duration-container {
     display: flex;
-    border: 1px solid yellow;
 }
 
 .resume-info-course-duration-container h4 {
     margin-right: 15px;
-    border: 1px solid orange;
 }
 
 .resume-info-course-situation-container {
     display: flex;
-    border: 1px solid red;
 }
 
 .resume-info-course-situation-container h4 {
     margin-right: 7px;
-    border: 1px solid orange;
 }
 
 @media (min-width: 576px) {
     .resume-info-container h2 {
-        border-bottom: 3px solid #A0A0A0;
+        border-bottom: 3px solid #424242;
     }
 
     .resume-info-container h2 {
@@ -91,6 +82,10 @@
 }
 
 @media (min-width: 992px) {
+.resume-personal-info-container {
+    margin-bottom: 15px;
+}
+
     .resume-info-container {
         flex: 1;
         max-width: 620px;
@@ -103,6 +98,7 @@
 
     .resume-info-content h3 {
         font-size: 23px;
+        margin-bottom: 15px;
     }
 
     .resume-info-content h4 {
@@ -115,7 +111,6 @@
 
     .resume-info-course-container h4 {
         margin-top: 1px;
-        border: 1px solid red;
     }
 
     .resume-info-course-duration-container h4 {

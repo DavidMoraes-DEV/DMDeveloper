@@ -9,28 +9,18 @@ type Props = {
 
 const Tools = ({ tools, category }: Props) => {
   return (
-    <div className="skills-tools-container">
-      <div className="skills-tittle-container">
-        <h2>{`${category?.name}:`}</h2>
-      </div>
-      <div className="skills-tools-logos-container">
-        <span className="skills-tools-logos-db">
-          {tools.map((tool) => (
-            <span className={`logo-${tool.name}`} key={tool.id}>
-              <img src={tool.imgUrl} alt={tool.name} />
-            </span>
-          ))}
-        </span>
-
+    <section className="skills-tools-container">
+      <h2>{`${category?.name}:`}</h2>
+      <div className="row skills-tools-logos-container">
         {tools
-          .filter((tool) => tool.name === 'postman')
-          .map((postman) => (
-            <span className="skills-tools-postman" key={postman.id}>
-              <img src={postman.imgUrl} alt={postman.name} />
-            </span>
+          .sort((toolA, toolB) => toolA.id - toolB.id)
+          .map((tool) => (
+            <figure className="col-6 col-sm-4 col-md-3 col-lg-2 skills-logo" key={tool.id} >
+              <img src={tool.imgUrl} alt={tool.name} className={`logo-${tool.name}`}/>
+            </figure>
           ))}
       </div>
-    </div>
+    </section>
   );
 };
 

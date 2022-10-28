@@ -3,12 +3,12 @@ import { PersonalInfoData } from 'types/personalInfoData';
 import './styles.css';
 
 type Props = {
-  informations: PersonalInfoData;
+  info: PersonalInfoData;
   formations: FormationData[];
 };
 
-const PersonalInfo = ({ informations, formations }: Props) => {
-  const birthDate = new Date(informations.birthDate);
+const PersonalInfo = ({ info, formations }: Props) => {
+  const birthDate = new Date(info.birthDate);
 
   function formationDate(date: Date) {
     const newDate = new Date(date);
@@ -24,10 +24,10 @@ const PersonalInfo = ({ informations, formations }: Props) => {
   }
   
   return (
-    <div className="resume-info-container">
-      <h2 className="mb-3">{informations?.name}</h2>
+    <article className="resume-info-container">
+      <h2 className="mb-3">{info?.name}</h2>
       <div className="resume-personal-info-container">
-        <div className="resume-info-content">
+        <article className="resume-info-content">
           <h4>
             Nascimento:{' '}
             <span>{birthDate.toLocaleDateString().replaceAll('/', '-')}</span>
@@ -40,66 +40,66 @@ const PersonalInfo = ({ informations, formations }: Props) => {
             </span>
           </h4>
           <h4>
-            Sexo: <span>{informations?.genre}</span>
+            Sexo: <span>{info?.genre}</span>
           </h4>
           <h4>
-            Fone: <span>{informations?.phone}</span>
+            Fone: <span>{info?.phone}</span>
           </h4>
           <h4>
-            Email: <span>{informations?.email}</span>
+            Email: <span>{info?.email}</span>
           </h4>
-        </div>
-        <div className="resume-info-content">
+        </article>
+        <article className="resume-info-content">
           <h4>
-            Endereço: <span>{informations?.address}</span>
+            Endereço: <span>{info?.address}</span>
           </h4>
           <h4>
-            CEP: <span>{informations?.cep}</span>
+            CEP: <span>{info?.cep}</span>
           </h4>
           <h4>
             Cidade/Estado:{' '}
-            <span>{`${informations?.city} - ${informations?.state}`}</span>
+            <span>{`${info?.city} - ${info?.state}`}</span>
           </h4>
           <h4>
-            CNH Categoria(s): <span>{informations?.cnh}</span>
+            CNH Categoria(s): <span>{info?.cnh}</span>
           </h4>
           <h4>
             Trabalhando atualmente? <span>Não</span>
           </h4>
-        </div>
+        </article>
       </div>
       <div className="resume-info-content">
         <h3>Formação:</h3>
         {formations.map((formation) => (
-          <span key={formation.id}>
+          <article key={formation.id}>
             <h4>
               Instituição:<span>{` ${formation.institution}`}</span>
             </h4>
-            <span className="resume-info-course-container">
+            <div className="resume-info-course-container">
               <h4>
                 Curso:<span>{` ${formation.name}`}</span>
               </h4>
-              <span className="resume-info-course-duration-container">
+              <aside className="resume-info-course-duration-container">
                 <h4>
-                  Inicio:<span>{` ${formationDate(formation.start)}`}</span>
+                  Inicio:<span>{` ${formationDate(formation.initFormation)}`}</span>
                 </h4>
                 <h4>
-                  Término: <span>{` ${formationDate(formation.end)}`}</span>
+                  Término: <span>{` ${formationDate(formation.endFormation)}`}</span>
                 </h4>
-              </span>
-            </span>
-            <span className="resume-info-course-situation-container">
+              </aside>
+            </div>
+            <aside className="resume-info-course-situation-container">
               <h4>
                 Situação: <span>{` ${formation.status}`}</span>
               </h4>
               <h4>
-                Duração: <span>{`${durationFormation(formation.start, formation.end)} Anos`}</span>
+                Duração: <span>{`${durationFormation(formation.initFormation, formation.endFormation)} Anos`}</span>
               </h4>
-            </span>
-          </span>
+            </aside>
+          </article>
         ))}
       </div>
-    </div>
+    </article>
   );
 };
 

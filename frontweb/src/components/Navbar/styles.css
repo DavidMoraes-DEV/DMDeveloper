@@ -1,7 +1,7 @@
 .main-nav {
     height: 70px;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     border-bottom: 10px solid #2D569D;
 }
 
@@ -36,6 +36,12 @@
     background-color: #000000;
 }
 
+@media (min-width: 576px) {
+    .main-nav {
+        padding: 10px 20px;
+    }
+}
+
 @media (min-width: 768px) {
     .main-nav {
         padding: 10px 30px;
@@ -43,7 +49,7 @@
 
     .main-menu {
         display: flex;
-        width: 500px;
+        width: 300px;
         margin: 0;
         justify-content: space-between;
     }
@@ -67,5 +73,15 @@
     
     .main-menu-link.active {
         background-color: #2D569D;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-nav {
+        padding: 10px 40px;
+    }
+
+    .container-fluid {
+        max-width: 1400px;
     }
 }

@@ -9,22 +9,20 @@ type Props = {
 
 const Backend = ({ backendTecs, category }: Props) => {
   return (
-    <div className="skills-backend-container">
-      <div className="skills-tittle-container">
-        <h2>{`${category?.name}:`}</h2>
-      </div>
-      <div className="row skills-logos-container">
-        {backendTecs.map((backendTec) => (
-          <span className="col-6 col-sm-4 col-md-3 skills-logo" key={backendTec.id}>
+    <section className="skills-backend-container">
+      <h2>{`${category?.name}:`}</h2>
+      <div className="row skills-backend-logos-container">
+        {backendTecs.sort((backA, backB) => backA.id - backB.id).map((backendTec) => (
+          <figure className="col-6 col-sm-4 col-md-3 skills-logo" key={backendTec.id}>
             <img
               src={backendTec.imgUrl}
               alt={backendTec.name}
               className={`logo-${backendTec.name}`}
             />
-          </span>
+          </figure>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

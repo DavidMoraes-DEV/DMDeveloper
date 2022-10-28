@@ -1,8 +1,10 @@
 .projects-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
-    padding: 20px 20px 0 20px;
+    min-height: calc(100vh - 70px);
+    padding: 20px 20px 5px 20px;
 }
 
 .projects-itens-container {
@@ -11,12 +13,16 @@
 
 @media (min-width: 576px) {
     .projects-container {
-        padding: 30px 17px 0 17px;
+        padding: 30px 17px 5px 17px;
     }
 
     .projects-itens-container {
         max-width: none;
         width: 100%;
+    }
+
+    .projects-item-container {
+        padding-bottom: 25px;
     }
 }
 
@@ -31,18 +37,18 @@
 
     .projects-item-container {
         max-width: 400px;
-        padding: 0 15px;
+        padding: 0 15px 30px 15px;
     }
 }
 
 @media (min-width: 992px) {
     .projects-container {
-        padding: 40px 60px 0 60px;
+        padding: 40px 60px 10px 60px;
     }
 
     .projects-item-container {
         max-width: none;
-        padding: 0;
+        padding: 0 0 30px 0;
     }
 }
 

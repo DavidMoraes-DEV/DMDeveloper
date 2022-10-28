@@ -77,7 +77,7 @@ public class Formation implements Serializable {
 		return initFormation;
 	}
 
-	public void setStart(Instant initFormation) {
+	public void setInitFormation(Instant initFormation) {
 		this.initFormation = initFormation;
 	}
 
@@ -85,7 +85,7 @@ public class Formation implements Serializable {
 		return endFormation;
 	}
 
-	public void setEnd(Instant endFormation) {
+	public void setEndFormation(Instant endFormation) {
 		this.endFormation = endFormation;
 	}
 
