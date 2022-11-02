@@ -52,6 +52,7 @@ public class FormationService {
 		return new FormationDTO(entity);
 	}
 
+	@Transactional
 	public FormationDTO update(Long id, FormationDTO dto) {
 		try {
 		Formation entity = repository.getOne(id);

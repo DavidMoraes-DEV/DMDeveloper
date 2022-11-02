@@ -46,6 +46,7 @@ public class ProjectService {
 		return new ProjectDTO(entity);
 	}
 
+	@Transactional
 	public ProjectDTO update(Long id, ProjectDTO dto) {
 		try {
 		Project entity = repository.getOne(id);

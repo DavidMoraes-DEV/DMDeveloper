@@ -14,18 +14,28 @@ import com.dmdeveloper.portfolio.entities.Formation;
 import com.dmdeveloper.portfolio.entities.PersonalInfo;
 import com.dmdeveloper.portfolio.entities.Project;
 import com.dmdeveloper.portfolio.entities.Resume;
+import com.dmdeveloper.portfolio.entities.Role;
 import com.dmdeveloper.portfolio.entities.Skill;
+import com.dmdeveloper.portfolio.entities.User;
 import com.dmdeveloper.portfolio.repositories.CategoryRepository;
 import com.dmdeveloper.portfolio.repositories.CourseRepository;
 import com.dmdeveloper.portfolio.repositories.FormationRepository;
 import com.dmdeveloper.portfolio.repositories.PersonalInfoRepository;
 import com.dmdeveloper.portfolio.repositories.ProjectRepository;
 import com.dmdeveloper.portfolio.repositories.ResumeRepository;
+import com.dmdeveloper.portfolio.repositories.RoleRepository;
 import com.dmdeveloper.portfolio.repositories.SkillRepository;
+import com.dmdeveloper.portfolio.repositories.UserRepository;
 
 @Configuration
 @Profile("test")
 public class TestConfig implements CommandLineRunner {
+	
+	@Autowired
+	private RoleRepository roleRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@Autowired
 	private ResumeRepository resumeRepository;
@@ -50,6 +60,18 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
+		
+		Role role1 = new Role(null, "ROLE_VISITOR");
+		Role role2 = new Role(null, "ROLE_ADMIN");
+		roleRepository.saveAll(Arrays.asList(role1, role2));
+		
+		User user1 = new User(null, "David", "Moraes de Oliveira", "david@dmdeveloper.com", "$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG");
+		User user2 = new User(null, "DM", "Developer", "admin@dmdeveloper.com", "$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG");
+		userRepository.saveAll(Arrays.asList(user1, user2));
+		
+		user1.getRoles().add(role1);
+		user2.getRoles().addAll(Arrays.asList(role1, role2));
+		userRepository.saveAll(Arrays.asList(user1, user2));
 		
 		Resume resume = new Resume(null, "https://raw.githubusercontent.com/DavidMoraes-DEV/DMDeveloper/master/frontweb/src/assets/files/curriculum-david.pdf");
 		resumeRepository.saveAll(Arrays.asList(resume));

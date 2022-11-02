@@ -51,6 +51,7 @@ public class CourseService {
 		return new CourseDTO(entity);
 	}
 
+	@Transactional
 	public CourseDTO update(Long id, CourseDTO dto) {
 		try {
 		Course entity = repository.getOne(id);
