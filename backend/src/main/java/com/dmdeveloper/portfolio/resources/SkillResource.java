@@ -3,6 +3,8 @@ package com.dmdeveloper.portfolio.resources;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,7 +44,7 @@ public class SkillResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<SkillDTO> insert(@RequestBody SkillDTO dto) {
+	public ResponseEntity<SkillDTO> insert(@Valid @RequestBody SkillDTO dto) {
 		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(dto.getId()).toUri();
@@ -50,7 +52,7 @@ public class SkillResource {
 	}
 	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<SkillDTO> update(@PathVariable Long id, @RequestBody SkillDTO dto) {
+	public ResponseEntity<SkillDTO> update(@PathVariable Long id, @Valid @RequestBody SkillDTO dto) {
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}

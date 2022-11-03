@@ -3,6 +3,8 @@ package com.dmdeveloper.portfolio.resources;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,23 +40,23 @@ public class PersonalInfoResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<PersonalInfoDTO> insert(@RequestBody PersonalInfoDTO dto) {
+	public ResponseEntity<PersonalInfoDTO> insert(@Valid @RequestBody PersonalInfoDTO dto) {
 		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(dto.getId()).toUri();
 		return ResponseEntity.created(uri).body(dto);
+	}
+		
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<PersonalInfoDTO> update(@PathVariable Long id, @Valid @RequestBody PersonalInfoDTO dto) {
+		dto = service.update(id, dto);
+		return ResponseEntity.ok().body(dto);
 	}
 	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
-	}
-		
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<PersonalInfoDTO> update(@PathVariable Long id, @RequestBody PersonalInfoDTO dto) {
-		dto = service.update(id, dto);
-		return ResponseEntity.ok().body(dto);
 	}
 	
 }

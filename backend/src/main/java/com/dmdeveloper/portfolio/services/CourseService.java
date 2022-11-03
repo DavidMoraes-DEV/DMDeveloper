@@ -77,7 +77,7 @@ public class CourseService {
 		entity.setName(dto.getName());
 		entity.setInstitution(dto.getInstitution());
 		entity.setDuration(dto.getDuration());
-		entity.setCertificate(dto.getCertificate());
+		entity.setCertificateUrl(dto.getCertificateUrl());
 		
 		Resume resume = resumeRepository.getOne(dto.getResumeId());
 		entity.setResume(resume);

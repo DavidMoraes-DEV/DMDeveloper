@@ -3,28 +3,51 @@ package com.dmdeveloper.portfolio.dto;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import com.dmdeveloper.portfolio.entities.PersonalInfo;
 
 public class PersonalInfoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
+
+	@NotBlank(message = "Campo Obrigatório")
 	private String name;
 	private Instant birthDate;
 	private String genre;
+
+	@NotBlank(message = "Campo Obrigatório")
 	private String phone;
+
+	@NotBlank(message = "Campo Obrigatório")
+	@Email(regexp = "^\\w+[\\w-\\.]*\\@\\w+((-\\w+)|(\\w*))\\.[a-z]{2,3}$", message = "Apenas email válido: example@email.com")
 	private String email;
+
+	@NotBlank(message = "Campo Obrigatório")
+	@Size(min = 5, max = 100, message = "Deve conter entre 5 e 60 caracteres")
 	private String address;
+
+	@Pattern(regexp = "^\\d{5}-\\d{3}$|^\\d{8}$", message = "Apenas CEP brasileiro exemplo: 12345-678 ou 12345678")
 	private String cep;
+	
+	@NotBlank(message = "Campo Obrigatório")
 	private String city;
+	
+	@Size(min = 2, max = 2, message = "Informar apenas as siglas do Estado: PR, SP, SC...")
 	private String state;
+	
+	@Size(min = 1, max = 5, message = "Informar apenas a categoria: A, AB...")
 	private String cnh;
 	private Long resumeId;
-	
-	public PersonalInfoDTO () {
+
+	public PersonalInfoDTO() {
 	}
 
-	public PersonalInfoDTO (PersonalInfo entity) {
+	public PersonalInfoDTO(PersonalInfo entity) {
 		id = entity.getId();
 		name = entity.getName();
 		birthDate = entity.getBirthDate();
@@ -39,8 +62,7 @@ public class PersonalInfoDTO implements Serializable {
 		resumeId = entity.getResume().getId();
 	}
 
-	
-	public PersonalInfoDTO (Long id, String name, Instant birthDate, String genre, String phone, String email,
+	public PersonalInfoDTO(Long id, String name, Instant birthDate, String genre, String phone, String email,
 			String address, String cep, String city, String state, String cnh, Long resumeId) {
 		this.id = id;
 		this.name = name;
@@ -151,5 +173,5 @@ public class PersonalInfoDTO implements Serializable {
 	public void setResumeId(Long resumeId) {
 		this.resumeId = resumeId;
 	}
-	
+
 }

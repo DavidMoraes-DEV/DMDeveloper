@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import com.dmdeveloper.portfolio.entities.Category;
 import com.dmdeveloper.portfolio.entities.Skill;
 
@@ -11,7 +15,14 @@ public class SkillDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Size(min = 2, max = 30, message = "Deve conter entre 2 e 30 caracteres")
 	private String name;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Pattern(regexp = "(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?",
+			message = "Deve ser uma URL válida")
 	private String imgUrl;
 	private Long resumeId;
 	

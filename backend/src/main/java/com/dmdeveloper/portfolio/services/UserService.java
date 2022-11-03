@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.dmdeveloper.portfolio.dto.RoleDTO;
 import com.dmdeveloper.portfolio.dto.UserDTO;
 import com.dmdeveloper.portfolio.dto.UserInsertDTO;
+import com.dmdeveloper.portfolio.dto.UserUpdateDTO;
 import com.dmdeveloper.portfolio.entities.Role;
 import com.dmdeveloper.portfolio.entities.User;
 import com.dmdeveloper.portfolio.repositories.RoleRepository;
@@ -65,7 +66,7 @@ public class UserService implements UserDetailsService {
 	}
 
 	@Transactional
-	public UserDTO update(Long id, UserDTO dto) {
+	public UserDTO update(Long id, UserUpdateDTO dto) {
 		try {
 		User entity = repository.getOne(id);
 		copyDtoToEntity(dto, entity);
@@ -102,7 +103,7 @@ public class UserService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
 		User user = repository.findByEmail(username);
-		if( user ==null) {
+		if( user == null) {
 			logger.error("User not found: " + username);
 			throw new UsernameNotFoundException("Email not found");
 		}

@@ -22,7 +22,7 @@ public class Course implements Serializable {
 	private String name;
 	private String institution;
 	private Double duration;
-	private String certificate;
+	private String certificateUrl;
 	
 	@ManyToOne
 	@JoinColumn(name = "resume_id")
@@ -31,12 +31,12 @@ public class Course implements Serializable {
 	public Course() {
 	}
 
-	public Course(Long id, String name, String institution, Double duration, String certificate, Resume resume) {
+	public Course(Long id, String name, String institution, Double duration, String certificateUrl, Resume resume) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
 		this.duration = duration;
-		this.certificate = certificate;
+		this.certificateUrl = certificateUrl;
 		this.resume = resume;
 	}
 
@@ -72,12 +72,12 @@ public class Course implements Serializable {
 		this.duration = duration;
 	}
 
-	public String getCertificate() {
-		return certificate;
+	public String getCertificateUrl() {
+		return certificateUrl;
 	}
 
-	public void setCertificate(String certificate) {
-		this.certificate = certificate;
+	public void setCertificateUrl(String certificateUrl) {
+		this.certificateUrl = certificateUrl;
 	}
 
 	public Resume getResume() {

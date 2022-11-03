@@ -2,16 +2,32 @@ package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 import com.dmdeveloper.portfolio.entities.Course;
 
 public class CourseDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@Size(min=5 , max=100, message="Deve conter entre 5 e 100 caracteres")
+	@NotBlank(message = "Campo Obrigatório")
 	private String name;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Size(min = 5, max = 150, message = "Deve conter entre 5 e 150 caracteres")
 	private String institution;
+	
+	@Positive(message = "Deve ser um valor positivo")
 	private Double duration;
-	private String certificate;
+	
+	@Pattern(regexp = "(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?",
+			message = "Deve ser uma URL válida")
+	private String certificateUrl;
 	private Long resumeId;
 	
 	public CourseDTO() {
@@ -22,16 +38,16 @@ public class CourseDTO implements Serializable {
 		name = entity.getName();
 		institution = entity.getInstitution();
 		duration = entity.getDuration();
-		certificate = entity.getCertificate();
+		certificateUrl = entity.getCertificateUrl();
 		resumeId = entity.getResume().getId();
 	}
 	
-	public CourseDTO(Long id, String name, String institution, Double duration, String certificate, Long resumeId) {
+	public CourseDTO(Long id, String name, String institution, Double duration, String certificateUrl, Long resumeId) {
 		this.id = id;
 		this.name = name;
 		this.institution = institution;
 		this.duration = duration;
-		this.certificate = certificate;
+		this.certificateUrl = certificateUrl;
 		this.resumeId = resumeId;
 	}
 
@@ -67,12 +83,12 @@ public class CourseDTO implements Serializable {
 		this.duration = duration;
 	}
 
-	public String getCertificate() {
-		return certificate;
+	public String getCertificateUrl() {
+		return certificateUrl;
 	}
 
-	public void setCertificate(String certificate) {
-		this.certificate = certificate;
+	public void setCertificateUrl(String certificateUrl) {
+		this.certificateUrl = certificateUrl;
 	}
 
 	public Long getResumeId() {

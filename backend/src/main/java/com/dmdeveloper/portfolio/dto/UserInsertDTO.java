@@ -1,5 +1,8 @@
 package com.dmdeveloper.portfolio.dto;
 
+import com.dmdeveloper.portfolio.services.validation.UserInsertValid;
+
+@UserInsertValid
 public class UserInsertDTO extends UserDTO {
 	private static final long serialVersionUID = 1L;
 	

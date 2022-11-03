@@ -2,12 +2,16 @@ package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+
 import com.dmdeveloper.portfolio.entities.Role;
 
 public class RoleDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message = "Campo Obrigatório")
 	private String authority;
 	
 	public RoleDTO() {

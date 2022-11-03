@@ -2,16 +2,36 @@ package com.dmdeveloper.portfolio.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import com.dmdeveloper.portfolio.entities.Project;
 
 public class ProjectDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Size(min = 5, max = 100, message = "Deve conter entre 5 e 60 caracteres")
 	private String name;
+	
+	@NotBlank(message = "Campo Obrigatório")
 	private String description;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Pattern(regexp = "(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?",
+			message = "Deve ser uma URL válida")
 	private String gitUrl;
+	
+	@Pattern(regexp = "(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?",
+			message = "Deve ser uma URL válida")
 	private String projectUrl;
+	
+	@NotBlank(message = "Campo Obrigatório")
+	@Pattern(regexp = "(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?",
+			message = "Deve ser uma URL válida")
 	private String projectImage;
 	
 	public ProjectDTO () {
