@@ -3,5 +3,5 @@ export type CourseData = {
     name: string,
     institution: string,
     duration: number,
-    certificate: string
+    certificateUrl: string
 }

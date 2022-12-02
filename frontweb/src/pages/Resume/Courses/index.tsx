@@ -13,7 +13,7 @@ const Courses = ({ course }: Props) => {
       }`}
     >
       <div className="button-container">
-        <a href={course.certificate} target="_blank" rel="noopener noreferrer">
+        <a href={course.certificateUrl} target="_blank" rel="noopener noreferrer">
           <button className="btn base-button resume-course-button-container">
             CERTIFICADO
           </button>
