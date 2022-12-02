@@ -22,7 +22,7 @@ const ProjectCard = ( {project}: Props ) => {
                                 CÓDIGO GITHUB
                             </button>
                         </a>
-                        <a href={project?.projectUrl} target="_blank" rel='noopener noreferrer' className='project-card-button d-none'>
+                        <a href={project?.projectUrl} target="_blank" rel='noopener noreferrer' className={`project-card-button ${project?.name === "DM Developer" ? "d-none" : ""}`}>
                             <button className='btn base-button'>
                                 ABRIR PROJETO
                             </button>

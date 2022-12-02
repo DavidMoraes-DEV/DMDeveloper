@@ -78,7 +78,7 @@ const LoaderProject = () => {
                 viewBox="0 0 100% 100%"
                 backgroundColor="#1f1f1f"
                 foregroundColor="#2B2B2B"
-                className="loader-project-info-button-2 d-none"
+                className="loader-project-info-button-2"
               >
                 |--Título//FORMAÇÃO--|
                 <rect x="0" y="0" rx="3" ry="3" width="110px" height="100%" className="project-info-button-2" />
