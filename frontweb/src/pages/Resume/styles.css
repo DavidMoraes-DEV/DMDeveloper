@@ -19,13 +19,18 @@
     padding: 10px;
 }
 
+.resume-image-button-container a:hover {
+    background-color: #10326e;
+    border-radius: 5px;
+}
+
 .resume-image-container {
     width: 155px;
     height: 150px;
     margin-bottom: 15px;
     border-radius: 5px;
     overflow: hidden;
-    background-color: #464646;
+    background-color: #bababa;
 }
 
 .resume-image-container img {

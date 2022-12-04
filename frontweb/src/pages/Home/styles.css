@@ -1,30 +1,23 @@
 .home-container {
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 70px);
-  padding: 20px;
-}
-
-.home-container h1 {
-  font-size: 26px;
-  font-weight: 500;
-  margin: 0 20px 20px;
-  text-align: start;
-  color: #c3e6ff;
-  text-shadow: 1px 2px 10px #0008ff;
-  border-bottom: 3px solid #c3e6ff;
+  min-height: 700px;
+  padding: 20px 20px 0;
 }
 
 .home-apresentation-container {
-  padding-top: 10px;
+  height: calc(100vh - 90px);
+  min-height: 680px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: space-between;
 }
 
 .home-image-content {
-  width: 200px;
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
   overflow: hidden;
 }
 
@@ -47,7 +40,7 @@
 .home-apresentation-content h3 {
   font-size: 18px;
   font-weight: normal;
-  color: #A1A1A1;
+  color: #a1a1a1;
   margin-bottom: 20px;
 }
 
@@ -55,7 +48,7 @@
   font-weight: normal;
   font-size: 12px;
   text-align: justify;
-  color: #A1A1A1;
+  color: #a1a1a1;
   margin-bottom: 30px;
 }
 
@@ -63,6 +56,11 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+
+.home-apresentation-buttons-container a:hover {
+  background-color: #10326e;
+  border-radius: 5px;
 }
 
 .home-card-button {
@@ -74,32 +72,28 @@
 
 @media (min-width: 576px) {
   .home-container {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 50px 0;
   }
 
-  .home-container h1 {
-    width: 100%;
-    max-width: 510px;
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-  
   .home-apresentation-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 880px;
+  }
+
+  .home-image-content {
+    max-width: 500px;
+  }
+
+  .home-apresentation-content {
+    max-width: 700px;
   }
 
   .home-apresentation-content h2 {
+    font-size: 35px;
     border-bottom: 3px solid #424242;
   }
 
   .home-apresentation-content h3 {
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .home-apresentation-content p {
@@ -118,39 +112,25 @@
 
 @media (min-width: 768px) {
   .home-container {
-    padding: 40px 45px;
+    padding: 40px 45px 0;
   }
 
-  .home-container h1 {
-    max-width: none;
-    margin-bottom: 40px;
-  }
-  
   .home-apresentation-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .home-apresentation-content {
-    flex: 1;
-    width: 100%;
-    max-width: none;
-    padding: 20px 30px 30px 10px;
-    margin-left: 40px;
-  }
-
-  .home-apresentation-content h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
-  }
-
-  .home-apresentation-content p {
-    font-size: 15px;
+    min-height: 1050px;
   }
 
   .home-image-content {
-    margin-bottom: 0;
+    margin-top: 50px;
+    max-width: 600px;
+    min-height: 550px;
+  }
+
+  .home-apresentation-content {
+    max-width: 850px;
+  }
+
+  .home-apresentation-content h2 {
+    margin-bottom: 8px;
   }
 
   .home-apresentation-buttons-container {
@@ -164,40 +144,9 @@
   }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .home-container {
-    padding: 50px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-container h1 {
-    font-size: 50px;
-    width: 100%;
-    max-width: 1250px;
-    border-bottom: 4px solid #c3e6ff;
-  }
-
-  .home-apresentation-container {
-    max-width: 1250px;
-  }
-
-  .home-image-content {
-    width: 250px;
-  }
-
-  .home-apresentation-content h2 {
-    font-size: 42px;
-    margin-bottom: 5px;
-  }
-
-  .home-apresentation-content h3 {
-    font-size: 30px;
-  }
-
-  .home-apresentation-content p {
-    font-size: 18px;
+    padding: 50px 80px 0;
   }
 
   .home-card-button {
@@ -206,37 +155,46 @@
 }
 
 @media (min-width: 1200px) {
-.home-container {
-  padding: 45px 80px 50px;
-}
-
-  .home-image-content {
-    width: 345px;
+  .home-container {
+    padding: 0 30px;
+    min-height: 100%;
+    height: calc(100vh - 70px);
   }
 
-  .home-container h1 {
-    margin-bottom: 30px;
+  .home-apresentation-container {
+    min-height: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-image-content {
+    width: auto;
+    max-width: 700px;
+    height: calc(100vh - 100px);
+    max-height: 800px;
+    margin-top: 30px;
+  }
+
+  .home-image-content img {
+    height: 100%;
   }
 
   .home-apresentation-content {
     padding: 40px 50px 50px 20px;
-    margin-left: 80px;
-  }
-
-  .home-apresentation-content h2 {
-    font-size: 48px;
+    flex: 1;
+    margin-left: 0;
+    min-height: 350px;
   }
 
   .home-apresentation-content h3 {
-    font-size: 35px;
+    margin-bottom: 30px;
   }
 
   .home-apresentation-content p {
-    font-size: 22px;
     margin-bottom: 50px;
   }
 
   .home-card-button {
-    width: 220px;
+    width: 200px;
   }
 }

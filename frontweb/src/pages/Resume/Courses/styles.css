@@ -12,6 +12,11 @@
   justify-content: center
 }
 
+.button-container a:hover {
+  background-color: #10326e;
+  border-radius: 5px;
+}
+
 .resume-course-button-container {
   width: 135px;
   height: 30px;
@@ -128,7 +133,7 @@
     border-bottom: 2px dashed #424242;
   }
 
-  .course-grid-pair button {
+  .course-grid-pair a {
     margin-left: 20px;
   }
 

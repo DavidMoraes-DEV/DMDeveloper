@@ -63,6 +63,11 @@
   font-size: 11px;
 }
 
+.project-card-buttons-container a:hover {
+  background-color: #10326e;
+  border-radius: 5px;
+}
+
 .project-card-button button {
   color: #fff;
   font-size: 11px;

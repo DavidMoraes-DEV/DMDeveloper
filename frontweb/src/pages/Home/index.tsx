@@ -5,7 +5,6 @@ import './styles.css';
 const Home = () => {
   return (
     <section className="bg home-container">
-      <h1>OLÁ, SEJA BEM VINDO!</h1>
       <main className="home-apresentation-container">
           <figure className="home-image-content">
             <img src={ImageProfile} alt="" />
@@ -15,10 +14,8 @@ const Home = () => {
             <h2>David Moraes de Oliveira</h2>
             <h3>Desenvolvedor Web</h3>
             <p>
-              Estudando e expandindo sempre meus conhecimentos nesse incrível
-              universo do desenvolvimento web! <br />
-              <br />
-              Em busca da primeira oportunidade na área de desenvolvimento!
+              Focado no desenvolvimento de APIs, aplicando: JAVA com Spring Boot. Tenho conhecimentos também no frontend utilizando: Typescript com React.
+              Me dedico diáriamente aos estudos com foco e empenho para aperfeiçoar cada vez mais meus conhecimentos nas tecnologias que utilizo.  <br />
             </p>
 
             <aside className="home-apresentation-buttons-container">
