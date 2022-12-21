@@ -14,8 +14,9 @@ const Home = () => {
             <h2>David Moraes de Oliveira</h2>
             <h3>Desenvolvedor Web</h3>
             <p>
-              Focado no desenvolvimento de APIs, aplicando: JAVA com Spring Boot. Tenho conhecimentos também no frontend utilizando: Typescript com React.
-              Me dedico diáriamente aos estudos com foco e empenho para aperfeiçoar cada vez mais meus conhecimentos nas tecnologias que utilizo.  <br />
+              Estudante de Engenharia de Software com foco no desenvolvimento web fullstack, utilizando tecnologias como: Java - Spring Boot - TypeScript - React. Atualmente me dedico em período integral aos estudos.
+              <br /><br />Diariamente estou desenvolvendo projetos pessoais e me empenhando para aperfeiçoar os meus conhecimentos.
+              Estou sempre buscando novos conhecimentos que agreguem valor ao meu perfil de desenvolvedor. <br />
             </p>
 
             <aside className="home-apresentation-buttons-container">
