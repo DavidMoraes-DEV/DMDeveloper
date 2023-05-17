@@ -25,7 +25,7 @@ const Resume = () => {
         setResume(response.data);
       })
       .finally(() => {
-        setTimeout(() => (setIsLoading(false)), 5000);
+        setTimeout(() => (setIsLoading(false)), 3000);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
