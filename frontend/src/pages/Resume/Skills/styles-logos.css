@@ -58,27 +58,27 @@
 }
 
 .logo-css {
-    height: 60px;
+  height: 60px;
 }
 
 .logo-js {
-    height: 60px;
+  height: 60px;
 }
 
 .logo-react {
-    height: 60px;
+  height: 60px;
 }
 
 .logo-react-hook {
-    height: 60px;
+  height: 60px;
 }
 
 .logo-react-hook-form {
-    height: 60px;
+  height: 60px;
 }
 
 .logo-react-router {
-    height: 40px;
+  height: 40px;
 }
 
 .logo-axios {
@@ -86,7 +86,7 @@
 }
 
 .logo-bootstrap {
-    height: 25px;
+  height: 25px;
 }
 
 .logo-nodejs {
@@ -98,18 +98,18 @@
 }
 
 .logo-apex-charts {
-    height: 27px;
+  height: 27px;
 }
-  
+
 .logo-netlify {
-    height: 25px;
+  height: 25px;
 }
 
 .logo-jest {
-    height: 30px;
+  height: 30px;
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   .logo-spring-tools {
     margin-left: 30px;
   }
@@ -117,7 +117,7 @@
   .logo-mysql-workbench {
     margin-right: 20px;
   }
-  
+
   .logo-postman {
     width: 120px;
     margin-right: 30px;
@@ -177,57 +177,57 @@
   .logo-html {
     height: 80px;
   }
-  
+
   .logo-css {
-      height: 80px;
+    height: 80px;
   }
-  
+
   .logo-js {
-      height: 80px;
+    height: 80px;
   }
-  
+
   .logo-react {
-      height: 80px;
+    height: 80px;
   }
-  
+
   .logo-react-hook {
-      height: 80px;
+    height: 80px;
   }
-  
+
   .logo-react-hook-form {
-      height: 80px;
+    height: 80px;
   }
-  
+
   .logo-react-router {
-      height: 50px;
+    height: 50px;
   }
-  
+
   .logo-axios {
     height: 27px;
   }
-  
+
   .logo-bootstrap {
-      height: 30px;
+    height: 30px;
   }
-  
+
   .logo-nodejs {
     height: 30px;
   }
-  
+
   .logo-typescript {
     height: 30px;
   }
-  
+
   .logo-apex-charts {
-      height: 35px;
+    height: 35px;
   }
-    
+
   .logo-netlify {
-      height: 30px;
+    height: 30px;
   }
-  
+
   .logo-jest {
-      height: 35px;
+    height: 35px;
   }
 }
 
@@ -255,7 +255,7 @@
   .logo-postman {
     width: 170px;
   }
-  
+
   .logo-java {
     height: 80px;
   }
@@ -317,25 +317,48 @@
   }
 
   .logo-apex-charts {
-    margin-right: 70px;
+    margin-right: 10px;
   }
-  
+
   .logo-jest {
-    margin-left: 70px;
+    margin-left: 10px;
   }
 }
 
 @media (min-width: 1200px) {
+  .logo-spring-tools {
+    margin-left: 0;
+  }
+
+  .logo-visual-studio {
+    margin-left: 80px;
+  }
+
+  .logo-visual-studio-code {
+    margin-left: 70px;
+  }
+
+  .logo-css {
+    margin-left: 90px;
+  }
+
+  .logo-js {
+    margin-right: 30px;
+  }
+
   .logo-react-hook-form {
     height: 75px;
+    margin-left: 60px;
   }
 
   .logo-axios {
     height: 28px;
+    margin-left: 90px;
   }
 
   .logo-bootstrap {
     height: 32px;
+    margin-left: 120px;
   }
 
   .logo-typescript {
@@ -344,19 +367,21 @@
 
   .logo-nodejs {
     height: 33px;
+    margin-left: 40px;
   }
 
   .logo-apex-charts {
-    height: 45px;
-    margin-right: 150px;
+    height: 40px;
+    margin-left: 40px;
   }
-  
-.logo-netlify {
-  height: 40px;
-}
+
+  .logo-netlify {
+    height: 40px;
+    margin-right: 30px;
+  }
 
   .logo-jest {
     height: 45px;
-    margin-left: 150px;
+    margin-left: 05px;
   }
 }
